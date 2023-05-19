@@ -1,0 +1,95 @@
+/* NOTE: Legacy Browsers */ 
+/* using focus-within in a compound selector means some legacy browsers will fail to display the nav */
+/* since thid spplies chiefly to Internet Explorer which was officially retired in June 2022 */ 
+/* and accounted for less than 1% of internet traffice in May 2021, and this site is aimed primarily at mobile users anyway */
+/* this was deemd acceptable */
+/* https://qz.com/2011408/some-companies-will-still-use-internet-explorer-after-its-retired */
+/* pub#: may 20 2021, Nicolas Rivero on QZ.com */
+
+
+/* menu based on solved with css! dropdown menus page from css-tricks site */
+/* https://css-tricks.com/solved-with-css-dropdown-menus/ */
+/* publ: may 1 2018, Una Kravets */
+
+.nav {
+    width: 100;
+    height: 3.2m;
+    background: slategrey;
+    border-bottom: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.nav a {
+    text-decoration: none;    
+}
+
+.nav nav {
+    font-family: 'Red Hat Display', sans-serif;
+    overflow-x: hidden;
+}
+
+.nav ul {
+    background: slategrey;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.nav li {
+    color: #ffffff;
+    background: slategrey;
+    display: block;
+    float: left;
+    height: 1.4rem;
+    overflow: visible;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    min-width: 5rem;
+}
+
+.nav li a {
+    color: #ffffff;
+}
+   
+.nav li:hover,
+li:focus-within {
+    background: #e27501;
+    cursor: pointer;
+    
+}
+
+/* Not usually recommended to remove blue outline for accessibility, */
+/* but it's unsightly, and only applies to hover state when sub menu showing, so remains safe */
+
+li:focus-within a {
+    outline: none;
+  }
+
+.nav ul li ul {
+    background: slategrey;
+    visibility: hidden;
+    opacity: 0;
+    min-width: 10rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+}
+   
+.nav ul li:hover > ul,
+ul li:focus-within > ul {
+ul li ul:hover,
+ul li ul:focus {
+     visibility: visible;
+     opacity: 1;
+     display: block;
+}
+ 
+.nav ul li ul li {
+     clear: both;
+     width: 100%;
+}
