@@ -37,8 +37,8 @@
 }
 
 .header-text h1 {
-    font-family: 'Days One', sans-serif;
-    color: #992915;
+    font-family: 'Roboto', sans-serif;
+    color: #111;
     font-size: 3.5vw;
     filter: drop-shadow(2px 2px 2px darkslategrey);
     text-align:center;
