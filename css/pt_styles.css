@@ -209,13 +209,6 @@ img.reload {
   padding: 0px;
 }
 
-/* gives a border to the image when in focus
-.carousel .carousel-items.focus {
-  padding: 2px;
-  border: solid 3px #005a9c;
-}
-*/
-
 .carousel .carousel-item {
   display: none;
   max-height: auto;
@@ -281,7 +274,7 @@ img.reload {
   background-color: rgb(0 0 0 / 100%);
 }
 
-.carousel .carousel-item .carousel-caption a:onclick {
+.carousel .carousel-item .carousel-caption a:active {
   padding: 4px;
   border: 2px solid #fff;
   background-color: rgb(0 0 0 / 100%);
@@ -380,7 +373,7 @@ img.reload {
   stroke: white;
 }
 
-.carousel .controls button:onclick svg .background,
+.carousel .controls button:active svg .background,
 .carousel .controls button:hover svg .background,
 .carousel .controls button:hover svg .border {
   fill: #005a9c;
@@ -388,7 +381,7 @@ img.reload {
   opacity: 1;
 }
 
-.carousel .controls button:onclick svg .border {
+.carousel .controls button:active svg .border {
   stroke: white;
 }
 
