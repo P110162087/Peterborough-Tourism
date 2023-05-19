@@ -281,7 +281,7 @@ img.reload {
   background-color: rgb(0 0 0 / 100%);
 }
 
-.carousel .carousel-item .carousel-caption a:focus {
+.carousel .carousel-item .carousel-caption a:onclick {
   padding: 4px;
   border: 2px solid #fff;
   background-color: rgb(0 0 0 / 100%);
@@ -380,7 +380,7 @@ img.reload {
   stroke: white;
 }
 
-.carousel .controls button:focus svg .background,
+.carousel .controls button:onclick svg .background,
 .carousel .controls button:hover svg .background,
 .carousel .controls button:hover svg .border {
   fill: #005a9c;
@@ -388,7 +388,7 @@ img.reload {
   opacity: 1;
 }
 
-.carousel .controls button:focus svg .border {
+.carousel .controls button:onclick svg .border {
   stroke: white;
 }
 
