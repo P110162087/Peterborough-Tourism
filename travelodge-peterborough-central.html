@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+
+<!-- NOTE: Web Crawlers welcome throughout site, so specifically allowed using the robots.txt file in the root, following robots protocol -->
+<!-- NOTE: since the nav menu is interactive, ARIA  labels included where necessary for accessibility --> 
+
+<html>
+
+  <head>
+    <title>Visit Peterborough - Peterborough Tourism</title><!-- SEO - site name is taking second place to name of top-ranked site in sector-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Visit Peterborough - Peterborough Tourism: Visiting Peterborough? See what to do, where to stay, and what's on in the beautiful, historic town of Peterborough."><!-- SEO - description covers top three tourism search terms, plus competes with top-ranked site in sector -->
+    <meta name="keywords" content="Visit, Peterborough, tourism, places, things to see, whats on, what to do, where to stay"><!-- keywords cover generic tourism base - deeper linked landing pages are more specific - note whats on without apostrophe for keyword-->
+    <meta name="author" content="P110162087"><!-- Moi -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon.png"><!-- A site without a favicon showing on the tab looks a bit too 'under construction' to me.  Amazing how many sites fail to use this easy branding advert -->
+    <link rel="stylesheet" href="./css/pt_styles.css"><!-- stylesheet - everything is all in one sheet - faster page loading, easier to find the code, and limits inheritance conflicts -->
+    
+    <!-- API call for my chosen google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
+    
+    <script src="./javascript/carousel.js"></script><!-- javascript file for the home page carousel - other image sliders are managed purely with css keyframes -->
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="menu_ribbon">
+
+        <div class="logo">
+          <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">
+          <h1>Peterborough Tourism</h1>
+        </div><!-- Logo -->
+
+        <nav role="navigation">
+
+          <!-- NOTE: top level menu items in reverse order as they are floated right -->
+          <!-- Only three items in each category, enough to show my approach -->
+          <!-- no contact links in the nav - it is becoming a design standard to have this in the page footer, and website visitors are learning to expect this -->
+          <ul>
+            <li><a href="./whats-on.html">What's On</a></li>
+
+            <li><a href="./accommodation.html">Accommodation</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./bull-hotel.html">The Bull Hotel</a></li>
+                <li><a href="./pearl-hotel.html">The Pearl Hotel</a></li>
+                <li><a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a></li>
+              </ul>
+            </li>
+                
+            <li><a href="./food-and-drink.html">Food & Drink</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./1498-the-spice-affair.html">1498 The Spice Affair</a></li>
+                <li><a href="./argo-lounge.html">Argo Lounge</a></li>
+                <li><a href="./wildwood.html">Wildwood</a></li>
+              </ul>
+            </li>
+
+            <li><a href="./activities.html">Activities</a>
+              <ul class="dropdown" aria-label="subenu">
+                <li><a href="./flag-fen.html">Flag Fen</a></li>
+                <li><a href="./peterborough-cathedral.html">Peterborough Cathedral</a></li>
+                <li><a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a></li>
+              </ul>
+            </li>
+                
+            <li><a href="./index.html">Home</a></li>
+                
+          </ul>   
+        </nav>
+      </div><!--menu ribbon -->
+            
+    </div><!-- header -->
+
+
+
+
+
+    <h1>Traveloge Peterborough Central</h1>
+
+    </body>
+    </html>

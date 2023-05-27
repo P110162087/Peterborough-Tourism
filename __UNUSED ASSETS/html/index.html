@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peterborough Tourism</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Peterborough Tourism: Visiting Peterborough? This website has everything you need to know about what to do and where to stay in the beautiful, historic town of Peterborough.">
+    <meta name="keywords" content="Peterborough, tourism, places, holiday, weekend break, hotel, camping, pub, club, activities, restaurant, eat, dining, fun, medieval, roman, historic">
+    <meta name="author" content="P110162087">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/pt_styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <script src="../javascript/carousel.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="content">
+        <div class="top">
+          <div class="header">
+            
+            <div class="header-text">
+              <img src="../images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="100" height="100">
+                <h1>Peterborough Tourism</h1>
+                <h2>Welcome to Historic Peterborough!</h2> 
+                <h2>(It's probably not as bad as you've heard)</h2>
+            </div>
+          </div>
+        
+          <!-- NOTE: since the nav menu is interactive, ARIA  labels included where necessary for accessibility --> 
+
+          
+
+          <div id="menu_ribbon">
+            <nav role="navigation">
+              <ul>
+                  <li class="ribbon"><a href="#">Home</a></li>
+                  <li class="ribbon"><a href="#">Activities</a>
+                      <ul class="dropdown" aria-label="submenu">
+                          <li><a href="#">Activity 1</a></li>
+                          <li><a href="#">Activity 2</a></li>
+                          <li><a href="#">Activity 3</a></li>
+                      </ul>
+                  </li>
+                  <li class="ribbon"><a href="#">Food & Drink</a>
+                    <ul class="dropdown" aria-label="submenu">
+                        <li><a href="#">Food & Drink 1</a></li>
+                        <li><a href="#">Food & Drink 2</a></li>
+                        <li><a href="#">Food & Drink 3</a></li>
+                    </ul>
+                    <li class="ribbon"><a href="#">Accommodation</a>
+                      <ul class="dropdown" aria-label="submenu">
+                          <li><a href="#">Accommodation 1</a></li>
+                          <li><a href="#">Accommodation 2</a></li>
+                          <li><a href="#">Accommodation 3</a></li>
+                      </ul>
+                </li>
+                  <li class="ribbon"><a href="about.html">About</a></li>
+              </ul>   
+          </nav> 
+        </div>
+      </div>
+
+<!-- NOTE:  Edited version of the image slider appearing on https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-1-prev-next/ which includes accessibility contrast and ARIA labels-->
+
+      <section id="myCarousel"
+      class="carousel"
+      aria-roledescription="carousel"
+      aria-label="Peterborough Highlights">
+<div class="carousel-inner">
+ <div class="controls">
+   <button type="button"
+           class="rotation pause"
+           aria-label="Stop automatic slide show">
+     <svg width="42"
+          height="34"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+       <rect class="background"
+             x="2"
+             y="2"
+             rx="5"
+             ry="5"
+             width="38"
+             height="24"></rect>
+       <rect class="border"
+             x="4"
+             y="4"
+             rx="5"
+             ry="5"
+             width="34"
+             height="20"></rect>
+       <polygon class="pause" points="17 8 17 20"></polygon>
+       <polygon class="pause" points="24 8 24 20"></polygon>
+       <polygon class="play" points="15 8 15 20 27 14"></polygon>
+     </svg>
+   </button>
+   <button type="button"
+           class="previous"
+           aria-controls="myCarousel-items"
+           aria-label="Previous Slide">
+     <svg width="42"
+          height="34"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+       <rect class="background"
+             x="2"
+             y="2"
+             rx="5"
+             ry="5"
+             width="38"
+             height="24"></rect>
+       <rect class="border"
+             x="4"
+             y="4"
+             rx="5"
+             ry="5"
+             width="34"
+             height="20"></rect>
+       <polygon points="9 14 21 8 21 11 33 11 33 17 21 17 21 20"></polygon>
+     </svg>
+   </button>
+   <button type="button"
+           class="next"
+           aria-controls="myCarousel-items"
+           aria-label="Next Slide">
+     <svg width="42"
+          height="34"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg">
+       <rect class="background"
+             x="2"
+             y="2"
+             rx="5"
+             ry="5"
+             width="38"
+             height="24"></rect>
+       <rect class="border"
+             x="4"
+             y="4"
+             rx="5"
+             ry="5"
+             width="34"
+             height="20"></rect>
+       <polygon points="9 11 21 11 21 8 33 14 21 20 21 17 9 17"></polygon>
+     </svg>
+   </button>
+ </div>
+ <div id="myCarousel-items"
+      class="carousel-items"
+      aria-live="off">
+   <div class="carousel-item active"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="1 of 6">
+     <div class="carousel-image">
+       <a href="#">
+         <img src="../images/carousel/img1.png" alt="Sacrewell Farm">
+       </a>
+     </div>
+     <div class="carousel-caption">
+       <h3>
+         <a href="#" id="carousel-label-1">
+           Sacrewell Farm PNG
+         </a>
+       </h3>
+       <div class="hidden-xs hidden-sm">
+         <p>
+           <span class="descriptor">
+             Description of Place
+           </span>
+         </p>
+       </div>
+     </div>
+   </div>
+   <div class="carousel-item"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="2 of 6">
+     <div class="carousel-image">
+       <a href="#">
+         <img src="../images/carousel/img2.jpg" alt="Sacrewell Farm">
+       </a>
+     </div>
+     <div class="carousel-caption">
+       <h3>
+         <a href="#" id="carousel-label-2">
+            Sacrewell Farm JPG
+         </a>
+       </h3>
+       <div>
+         <p>
+           <span class="descriptor">
+             Another description
+           </span>
+         </p>
+       </div>
+     </div>
+   </div>
+   <div class="carousel-item"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="3 of 6">
+     <div class="carousel-image">
+       <a href="#">
+         <img src="../images/carousel/img3.gif" alt="MSacrewell Farm">
+       </a>
+     </div>
+     <div class="carousel-caption">
+       <h3>
+         <a href="#" id="carousel-label-3">
+            Sacrewell Farm GIF
+         </a>
+       </h3>
+       <div>
+        <p>
+            <span class="descriptor">
+              Description -tastic
+            </span>
+          </p>
+       </div>
+     </div>
+   </div>
+   <div class="carousel-item"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="4 of 6">
+     <div class="carousel-image">
+       <a href="#">
+         <img src="../images/carousel/img1.png" alt="Sacrewell Farm">
+       </a>
+     </div>
+     <div class="carousel-caption">
+       <h3>
+         <a href="#" id="carousel-label-4">
+           Sacrewell Farm PNG
+         </a>
+       </h3>
+       <div>
+         <p>
+           <span class="descriptor">
+             Description
+           </span>
+         </p>
+       </div>
+     </div>
+   </div>
+   <div class="carousel-item"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="5 of 6">
+     <div class="carousel-image">
+       <a href="#">
+         <img src="../images/carousel/img2.jpg" alt="Sacrewell Farm">
+       </a>
+     </div>
+     <div class="carousel-caption">
+       <h3>
+         <a href="#" id="carousel-label-5">
+            Sacrewell Farm JPG
+         </a>
+       </h3>
+       <div>
+        <p>
+            <span class="descriptor">
+              Description again
+            </span>
+          </p>
+       </div>
+     </div>
+   </div>
+   <div class="carousel-item"
+        role="group"
+        aria-roledescription="slide"
+        aria-label="6 of 6">
+     <div class="carousel-image">
+       <a href="#">
+         <img src="../images/carousel/img3.gif" alt="Sacrewell Farm">
+       </a>
+     </div>
+     <div class="carousel-caption">
+       <h3>
+         <a href="#" id="carousel-label-6">
+            Sacrewell Farm GIF
+         </a>
+       </h3>
+       <div class="hidden-xs hidden-sm">
+         <p>
+           <span class="descriptor">
+             Description of all things
+           </span>
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+</section>
+<div class="col-sm-1"></div>  
+                 
+        <div class="footer">
+            
+            <p>
+                <img src="../images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50">
+                <br>
+                &copy; P110162087<br>
+                COM280: Web Design & Development<br>
+                2023
+            </p>
+
+            <p>Contact Us:<br>
+                <a href="./contact_us.html">Email</a><br>
+                <a href="./contact_us">Postal Address</a><br>
+                T: 07759 089039<br>
+                <a href="https://en.wikipedia.org/wiki/IP_over_Avian_Carriers">Carrier Pigeon</a>
+            </p>
+
+            <p>Bananas:<br>
+                Email<br>
+                Telephone<br>
+                Snail Mail<br>
+                Carrier Pigeon
+            </p> 
+           
+                      
+        </div>
+            
+
+        </div>
+    </div>  
+  </body>
+
+
+
+
+  
+</html>

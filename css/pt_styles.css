@@ -1,64 +1,77 @@
-/* ************ NOTES *********** */
-
-/* Styles are all specified here, there are no embedded style.  It's cleaner, and easier for others to edit.*/
+/* ************ MAIN NOTES *********** *
 
 /* All font sizes are specified using vw units (percentage of viewport width) to automatically resize according to the size of the viewport. */
+
+/* Hover effects have been applied for links in the footer - whilst this might seem superfluous when viewd on mobile devices, if the user has an active stylus */
+/* i.e. one that needs to be chrged to work, then hover effects can be seen on some devices */
+
+/* drop down menus are just plain awkward on small screen mobile devices, so the hamburger menu for mobile devices only links to top level menu items */
+/* larger screen mobile devices are treated to the full desktop nav */
+
 /* Homework, look at: bootstrap, hamburgers.css, font-awesome, react,  - complete image gallery tutorial in w3c, navbar tutorial, work on moodboard, wireframes, css selectors, box model website layout, grid layouts, etc. */
 /* javascript for forms, responsive web design */
 /* validate form on the fly, thumbs up for sent, etc. */
 /* www.nellen.co.za/static-website, www.hellomonday.com LEARN JAVASCRIPT */
+
 /* ********** END NOTES ********* */
+
+/* Begin Styling the page */
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  color: black;
+  margin: 3px;
+}
+
+
 .content {
-    /*  max-width: 1200px;  */
-    margin: auto;
+    margin-top: 5px;
     background-color: white;
 }
 
-.top {
-  top: 0;
-  width: 100%;
-  position: sticky;
-  z-index: 9999;
-  background-color: white;
-}
 
+/*
 .header {
-  display: block;
-  min-height: 150px; /* Space for header above menu ribbon */
-  max-width: 80%;
-  margin: auto;
+  display: flex;
+  z-index: 999999;
+}
+
+.header .logo {
+  display:flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+#header .logo h1 {
+  color: white;
+  margin-left: 10px;
+  font-size: 1.6vw;
   
+} */
+
+#intro-text h1, h2, p {
+  padding-left: 10px;
 }
 
-.header img {
-  float:left;
-    margin-right: 1em;
-    filter: drop-shadow(7px 7px 7px black);
-}
 
-.header-text h1 {
-    font-family: 'Roboto', sans-serif;
-    color: #111;
-    font-size: 3.5vw;
-    filter: drop-shadow(2px 2px 2px darkslategrey);
-    text-align:center;
-    vertical-align: text-top;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
 
-}
-  
-.header-text h2 {
-    font-family: 'Red Hat Display', sans-serif;
-    color: #992915;
-    font-size: 1.5vw;
-    vertical-align: top;
-    padding-top:0px;
-    padding-bottom: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align:center;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* NOTE: Legacy Browsers */ 
 /* Internet Explorer was officially retired in June 2022 */ 
@@ -67,130 +80,488 @@
 /* https://qz.com/2011408/some-companies-will-still-use-internet-explorer-after-its-retired */
 /* pub#: may 20 2021, Nicolas Rivero on QZ.com */
 
-
-#menu_ribbon {
-    font-family: 'Red Hat Display', sans-serif;
-    width: auto;
-    margin: 0 auto;
-    border-top: 0.5em;
-    border-top-style: solid;
-    border-top-color: black;
-    border-bottom: 0.5em;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-}
+/* Nav Styles */
 
 
-.ribbon {
-    position: relative;    
-}
 
-.dropdown { 
-  visibility: hidden; /* hides dropdown sub-menu */
-  opacity: 0;
-  position: absolute;
-  top: 100%;
-  left: 0%;
+
+
+/*.menu_ribbon {
+  /* position: fixed; /* breaks carousel - sticky not working 
   width: 100%;
-  transform: translateY(-1em);
-  z-index: 0;
-  transition: all 0.5s ease-in-out 0.5s, visibility 0s linear 0.5s, z-index 0s linear 0.5s;
-  background: slategrey;
+  background: #666;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+}
+
+.logo {
+  display: block;
+  float:left;
+  align-items: center;
+}
+
+/* nav {
+	
+} 
+
+a {
+  text-decoration: none;
+}
+
+nav ul {
+  background: #666;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+nav li {
+	color: white;
+  background: #666;
+	display: block;
+	float: right;
+	position: relative;
+	text-decoration: none;
+  transition-duration: 0.5s;
+}
+  
+nav li a {
+  color: white;
+  font-size: 1.4vw;
+}
+
+nav li:hover {
+	background: #992915;
+	cursor: pointer;
+}
+
+nav ul li ul {
+	background: slategrey;
+	visibility: hidden;
+  opacity: 0;
+	position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+	left: 0;
+  display: none;
+}
+
+nav ul li ul a {
+  font-size: 1.2vw;
+}
+
+nav ul li:hover > ul,
+nav ul li:focus-within > ul, /* keeps menu bar list item active when a sub menu is selected 
+nav ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+nav ul li ul li {
+	clear: both;
+  width: 100%;
+}
+/*
+.dropdown {
+  display:flexbox;
+}
+
+.dropdown li {
+  z-index: 999999;
+  transition: all 0.1s ease-in-out 0.1s, visibility 0.2s linear 0.2s, z-index 0.2s linear 0.2s;
+  width: 13rem;
 }
 
 .dropdown li:last-child {
-    border-bottom: 0.5em;
-    border-bottom-style: solid;
-    border-bottom-color: black;
-}
-
-.ribbon:hover .dropdown {
-  visibility: visible; /* shows dropdown sub-menu */
-  opacity: 1; 
-  z-index: 1;
-  transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
-  background: slategrey;
-  color: white;
+  border-bottom: 3px solid black;
 }
 
 
-.ribbon .dropdown li {
-    position: relative;
+/* for hamburger 
+
+.menu_ribbon .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+/*
+/*.menu_ribbon .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}*/
+
+
+
+
+/* menu ribbon
+
+.menu_ribbon .menu-items {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+/* menu button and icon OK */
+
+
+/* menu icon 
+
+.menu_ribbon .menu-icon {
+  cursor: pointer;
+  display: block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
 }
 
-li:focus-within > ul,
-li ul:focus { 
-    /* Accessibility: keeps parent highlighted when using mouse pointer */
-    visibility: visible;
-    opacity: 1;
-    display: block;
-}
-  
-.ribbon .dropdown li:hover {
-    background:#e27501;
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
-    transform: translateY(0%);
+.menu_ribbon .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
 }
 
-nav a { 
-    color: white; 
-    display: block; 
-    padding: 0.5em 1em; 
-    text-decoration: none;
-    cursor: pointer;
+.menu_ribbon .menu-icon .navicon:before,
+.menu_ribbon .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 
-nav ul li:hover,
-li:focus-within {  /* Acessibility: when tabbing, keep nav parent highlighted when dropdown in focus) */
-    background: #e27501;
-    color: white; 
+.menu_ribbon .menu-icon .navicon:before {
+  top: 5px;
 }
 
-nav ul,
-nav ul li { 
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
+.menu_ribbon .menu-icon .navicon:after {
+  top: -5px;
 }
 
-nav > ul { 
-    background: slategrey; 
-    text-align: center; 
+/* menu btn 
+
+.menu_ribbon .menu-btn {
+  display: none;
 }
 
-nav > ul > li { 
-    display: inline-block;
+.menu_ribbon .menu-btn:checked ~ .menu-items {
+  max-height: 240px;
 }
 
-nav > ul > li > a:link {
-    font-size: 1.7vw;} /* size of main nav links */
-
-nav > ul > li > a:hover, 
-nav > ul > li > ul > li > a:hover {
-    background: #e27501;
+.menu_ribbon .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
 }
 
-nav > ul > li > ul > li > a:link {
-    font-size: 1.5vw; /* size of dropdown nav links */
+.menu_ribbon .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
 }
+
+.menu_ribbon .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.menu_ribbon .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu_ribbon .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+
+/* 48em = 768px 
+
+@media (min-width: 48em) {
+  .menu_ribbon li {
+    float: left;
+  }
+  .menu_ribbon li a {
+    padding: 20px 30px;
+  }
+  .menu_ribbon .menu-items {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .menu_ribbon .menu-icon {
+    display: none;
+  }
+}
+
+
+
+
+/* for hamburger */
 /* End of Nav Styles */
 
 
-/* Main Body Styles */
+/*  NEW NAV STYLES  */
+
+/* header *
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu *
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon *
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn *
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px *
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/*ANOTHER NAV */
+
+
+
+
+/* END NEW NAV STYLES */
+
+
+
+.PTnav .logo {
+  float:left;
+}
+
+.PTnav {
+  overflow: hidden;
+  background-color: #666;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.PTnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: darkorange;
+  color: white;
+}
+
+.PTnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  /* padding: 14px 16px; */
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999999999;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #666;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.PTnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .PTnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .PTnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .PTnav.responsive {position: relative;}
+  .PTnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .PTnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .PTnav.responsive .dropdown {float: none;}
+  .PTnav.responsive .dropdown-content {position: relative;}
+  .PTnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* Main Body Styles *
 
 #main {
     min-height: 250px;
 }
 
-/* Slideshow Carousel Styles */
-/* .carousel */
+/* Home Page Carousel Styles */
 
 img.reload {
   padding: 0.25em;
-  display: block-inline;
+  display: inline-block;
   position: relative;
   top: 6px;
   height: 0.9em;
@@ -199,6 +570,9 @@ img.reload {
 .carousel {
   background-color: white;
   max-width: auto;
+  border-bottom: 3px solid black;
+  padding-bottom: 0;
+  padding-top: 2px;
 }
 
 .carousel .carousel-inner {
@@ -242,7 +616,6 @@ img.reload {
   margin: 0;
   padding: 6px;
   background-color: rgb(0 0 0 / 65%);
-  
   border-radius: 5px;
   border: 0 solid transparent;
 }
@@ -250,7 +623,6 @@ img.reload {
 .carousel-items .carousel-image a {
   display: block;
   margin: 0;
-  /* padding: 5px; */
   text-decoration: none;
   border: none;
 }
@@ -385,39 +757,188 @@ img.reload {
   stroke: white;
 }
 
+/* End Home Page Carousel Styles */
 
 
 
-/* End Slideshow Carousel Styles
+/* Styles for nav main category pages with image links */
+
+#link-block {
+  height: auto;
+  width: 99%;
+  margin: auto;
+  margin-bottom: 5px;
+  border: 1.5px solid black;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  display: table;
+}
+
+#link-block div {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+#link-block img {
+  display: block;
+  border: 1px solid #000;
+}
+
+#link-block h2, p {
+  vertical-align: text-top;
+}
+
+#link-block a {
+  text-decoration: none;
+}
+
+@media ( max-width: 30em ) {
+
+    #link-block {
+      display: block;
+      padding: 0.5em;
+    }
+   
+   #link-block div {
+      display: block;
+      width: 94%;
+      max-width: 16.25em; 
+      margin: auto;
+      padding: 0;
+    }
+  
+    #link-block img {
+      width: 100%;
+      height: auto;
+    }	
+}
+
+/* End stykes for nav main category pages with image links */
+
+/* Stykes for venue details section*/
+   
+#details {
+  height: auto;
+  width: 99%;
+  margin: auto;
+  margin-bottom: 5px;
+  display: table;
+}
+
+#details div {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+#details img {
+  display: block;
+  border: 1px solid #000;
+}
+
+#details h2 {
+  vertical-align: text-top;
+}
+
+#details a {
+  text-decoration: none;
+}
+
+@media ( max-width: 30em ) {
+
+  #details {
+    display: block;
+    padding: 0.5em;
+  }
+   
+  #details div {
+    display: block;
+    width: 94%;
+    max-width: 16.25em; 
+    margin: auto;
+    padding: 0;
+  }
+
+  #details img {
+    width: 100%;
+    height: auto;
+  }	
+   
+}
+
+/* End venue details */
+
+/*slideshow using keyframes*/
+#slideshow {
+  position: relative;
+  width: 372px;
+  height: 248px;
+  overflow: hidden;
+  border: 1px solid black;
+  filter: drop-shadow(3px 3px 3px black);
+}
+
+#slideshow img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: slide 15s infinite;
+  animation-delay: 2s;
+}
+  
+@keyframes slide {
+  0% {
+    transform: translateX(0px)
+  }
+  25% {
+    transform: translateX(-383px)
+  }
+  50% {
+    transform: translateX(-766px)
+  }
+  75% {
+    transform: translateX(-1149px)
+  }
+  100% {
+    transform: translateX(-1532px)
+  }
+}
+/* End Slider*/
 
 /* End MainBody Styles */
-
 
 /*Footer Styles */
 
 .footer {
-    min-height: 200px;
-    background-color: slategrey;
+    min-height: 180px;
+    height: auto;
+    background-color: #666;
     color: white;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-right: 10px;
     font-family: 'Red Hat Display', sans-serif;
-    border-top: 0.5em black solid;
+    border-top: 3px solid  black;
+    border-bottom: 3px solid black;
 }
 
-.footer p:first-child {
+.footer div:first-child {
     float: left;
     text-align:left;
     width: 60%;  
 }
 
-.footer p:nth-child(2) {
+.footer div:nth-child(2) {
     float: right;
     text-align:right;
     width: 20%;
 }
 
-.footer p:last-child{
+.footer div:last-child{
     float: right;
     text-align:right;
     width: 20%;
@@ -430,15 +951,41 @@ img.reload {
 }
     
 .footer a:hover {
-    color: #FF00FF;
+    color: yellow;
+    font-weight:900;
+    font-size: larger;
   }
-.footer img {
-    padding-bottom: 30px;
-    filter: drop-shadow(4px 4px 4px black);
+
+.footer #about img {
+    margin-bottom: 30px;
+}
+
+.footer #about img:hover {
+  filter: drop-shadow(4px 4px 5px whitesmoke);
 }
 
 .footer ul {
     list-style-type: none;
+} 
+
+.footer #social {
+  display: flex;
 }
+
+.footer #social img {
+  width: 40px; 
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 8px;
+  border: 1.5px solid white;
+
+}
+
+.footer #social img:hover {
+  filter: drop-shadow(4px 4px 5px whitesmoke);
+}
+
+
+@media (max-width=);
 
 /* End Footer Styles */

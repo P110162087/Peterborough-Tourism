@@ -1,0 +1,668 @@
+/* ************ NOTES *********** */
+
+/* Styles are all specified here, there are no embedded style.  It's cleaner, and easier for others to edit.*/
+
+/* All font sizes are specified using vw units (percentage of viewport width) to automatically resize according to the size of the viewport. */
+/* Homework, look at: bootstrap, hamburgers.css, font-awesome, react,  - complete image gallery tutorial in w3c, navbar tutorial, work on moodboard, wireframes, css selectors, box model website layout, grid layouts, etc. */
+/* javascript for forms, responsive web design */
+/* validate form on the fly, thumbs up for sent, etc. */
+/* www.nellen.co.za/static-website, www.hellomonday.com LEARN JAVASCRIPT */
+/* ********** END NOTES ********* */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+#intro-text h1, h2, p {
+
+  padding-left: 10px;
+}
+
+
+.content {
+    /*  max-width: 1200px;  */
+    margin: auto;
+    background-color: white;
+}
+
+/*.top {
+  top: 0;
+  width: 100%;
+  position: sticky;
+  z-index: 9999;
+  background-color: white;
+} */
+
+#header {
+  display: table-cell;
+  min-height: 80px; /* Space for header above menu ribbon */
+  max-width: 80%;
+  margin: auto;
+  vertical-align: text-top;
+  position: sticky;
+  z-index: 99;
+  background-color: white;
+  
+}
+
+#header div {
+  display: table-cell;
+}
+
+#header img {
+  float:left;
+  margin-right: 1em;
+  filter: drop-shadow(3px 3px 3px black);
+}
+
+#header h1 {
+    
+    color: #111;
+    font-size: 2.5vw;
+    /* filter: drop-shadow(2px 2px 2px darkslategrey);*/
+    float: left;
+    vertical-align: text-top;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    text-align: ;
+    vertical-align: text-top;
+
+}
+  
+#header-text h2 {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #992915;
+    font-size: 1.5vw;
+    vertical-align: top;
+    padding-top:0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align:center;
+}
+
+/* NOTE: Legacy Browsers */ 
+/* Internet Explorer was officially retired in June 2022 */ 
+/* and accounted for less than 1% of internet traffice in May 2021, and this site is aimed primarily at mobile users anyway */
+/* this was deemd acceptable */
+/* https://qz.com/2011408/some-companies-will-still-use-internet-explorer-after-its-retired */
+/* pub#: may 20 2021, Nicolas Rivero on QZ.com */
+
+
+#menu_ribbon {
+    font-family: 'Red Hat Display', sans-serif;
+    width: auto;
+    margin: 0 auto;
+    border-top: 0.5em;
+    border-top-style: solid;
+    border-top-color: black;
+    border-bottom: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+
+.ribbon {
+    position: relative;    
+}
+
+.dropdown { 
+  visibility: hidden; /* hides dropdown sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  transform: translateY(-1em);
+  z-index: 0;
+  transition: all 0.5s ease-in-out 0.5s, visibility 0s linear 0.5s, z-index 0s linear 0.5s;
+  background: slategrey;
+}
+
+.dropdown li:last-child {
+    border-bottom: 0.5em;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.ribbon:hover .dropdown {
+  visibility: visible; /* shows dropdown sub-menu */
+  opacity: 1; 
+  z-index: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+  background: slategrey;
+  color: white;
+}
+
+
+.ribbon .dropdown li {
+    position: relative;
+}
+
+li:focus-within > ul,
+li ul:focus { 
+    /* Accessibility: keeps parent highlighted when using mouse pointer */
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+  
+.ribbon .dropdown li:hover {
+    background:#e27501;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transform: translateY(0%);
+}
+
+nav a { 
+    color: white; 
+    display: block; 
+    padding: 0.5em 1em; 
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul li:hover,
+li:focus-within {  /* Acessibility: when tabbing, keep nav parent highlighted when dropdown in focus) */
+    background: #e27501;
+    color: white; 
+}
+
+nav ul,
+nav ul li { 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+nav > ul { 
+    background: slategrey; 
+    text-align: center; 
+}
+
+nav > ul > li { 
+    display: inline-block;
+}
+
+nav > ul > li > a:link {
+    font-size: 1.7vw;} /* size of main nav links */
+
+nav > ul > li > a:hover, 
+nav > ul > li > ul > li > a:hover {
+    background: #e27501;
+}
+
+nav > ul > li > ul > li > a:link {
+    font-size: 1.5vw; /* size of dropdown nav links */
+}
+/* End of Nav Styles */
+
+
+/* Main Body Styles */
+
+#main {
+    min-height: 250px;
+}
+
+/* Slideshow Carousel Styles */
+/* .carousel */
+
+img.reload {
+  padding: 0.25em;
+  display: block-inline;
+  position: relative;
+  top: 6px;
+  height: 0.9em;
+}
+
+.carousel {
+  background-color: white;
+  max-width: auto;
+}
+
+.carousel .carousel-inner {
+  position: relative;
+}
+
+.carousel .carousel-items {
+  padding: 0px;
+}
+
+.carousel .carousel-item {
+  display: none;
+  max-height: auto;
+  max-width: auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel .carousel-item.active {
+  display: block;
+}
+
+.carousel .carousel-item .carousel-image a img {
+  height: 100%;
+  width: 100%;
+}
+
+.carousel .carousel-item .carousel-caption a {
+  
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.carousel .carousel-item .carousel-caption a,
+.carousel .carousel-item .carousel-caption span.descriptor {
+  font-family: 'Red Hat Display', sans-serif;
+  display: inline-block;
+  margin: 0;
+  padding: 6px;
+  background-color: rgb(0 0 0 / 65%);
+  
+  border-radius: 5px;
+  border: 0 solid transparent;
+}
+
+.carousel-items .carousel-image a {
+  display: block;
+  margin: 0;
+  /* padding: 5px; */
+  text-decoration: none;
+  border: none;
+}
+
+.carousel-item .carousel-caption a {
+  display: inline-block;
+  margin: 0;
+  padding: 6px;
+  color: black;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.carousel-item .carousel-caption span.descriptor,
+.carousel-item .carousel-caption span.descriptor:hover {
+  background-color: transparent;
+}
+
+.carousel .carousel-item .carousel-caption a:hover,
+.carousel .carousel-item .carousel-caption span.descriptor:hover {
+  background-color: rgb(0 0 0 / 100%);
+}
+
+.carousel .carousel-item .carousel-caption a:active {
+  padding: 4px;
+  border: 2px solid #fff;
+  background-color: rgb(0 0 0 / 100%);
+  outline: none;
+  border-width: 2px solid #fff;
+  color: #fff;
+}
+
+.carousel .carousel-item .carousel-caption p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.carousel .carousel-item .carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  left: 15%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Shared CSS for Pause, Previous and Next Buttons */
+
+.carousel .controls {
+  box-sizing: border-box;
+  position: absolute;
+  top: 1em;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  padding: 0.25em 1.25em 0;
+}
+
+.carousel .controls button {
+  position: absolute;
+  z-index: 10;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+.carousel .controls button.previous {
+  right: 70px;
+}
+
+.carousel .controls button.next {
+  right: 18px;
+}
+
+/* SVG Controls */
+
+.carousel .controls svg .background {
+  stroke: black;
+  fill: black;
+  stroke-width: 1px;
+  opacity: 0.6;
+}
+
+.carousel .controls svg .border {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 2px;
+}
+
+.carousel .controls svg .pause {
+  stroke-width: 4;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.carousel .controls svg .play {
+  stroke-width: 1;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.carousel .controls .pause svg .pause {
+  fill: white;
+  stroke: white;
+}
+
+.carousel .controls .play svg .play {
+  fill: white;
+  stroke: white;
+}
+
+.carousel .controls svg polygon {
+  fill: white;
+  stroke: white;
+}
+
+.carousel .controls button:active svg .background,
+.carousel .controls button:hover svg .background,
+.carousel .controls button:hover svg .border {
+  fill: #005a9c;
+  stroke: #005a9c;
+  opacity: 1;
+}
+
+.carousel .controls button:active svg .border {
+  stroke: white;
+}
+
+
+
+
+/* End Slideshow Carousel Styles
+
+/* Styles for top category link pages with image links */
+
+
+
+#link-block {
+  height: auto;
+  width: 99%;
+  margin: auto;
+  margin-bottom: 5px;
+  border: 1.5px solid black;
+  box-sizing: border-box;
+  background-color: #f3f3f3;
+  display: table;
+}
+
+#link-block div {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+#link-block img {
+  display: block;
+  border: 1px solid #000;
+}
+
+#link-block h2, p {
+  vertical-align: text-top;
+}
+
+#link-block a {
+  text-decoration: none;
+}
+
+@media ( max-width: 30em ) {
+
+    #link-block {
+      display: block;
+      padding: 0.5em;
+    }
+   
+   #link-block div {
+      display: block;
+      width: 94%;
+      max-width: 16.25em; 
+      margin: auto;
+      padding: 0;
+    }
+  
+    #link-block img {
+      width: 100%;
+      height: auto;
+    }	
+   }
+
+
+   /*venue-details */
+
+   
+#details {
+  height: auto;
+  width: 99%;
+  margin: auto;
+  margin-bottom: 5px;
+  display: table;
+}
+
+#details div {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+#details img {
+  display: block;
+  border: 1px solid #000;
+}
+
+#details h2 {
+  vertical-align: text-top;
+}
+
+#details a {
+  text-decoration: none;
+}
+
+@media ( max-width: 30em ) {
+
+    #details {
+      display: block;
+      padding: 0.5em;
+    }
+   
+   #details div {
+      display: block;
+      width: 94%;
+      max-width: 16.25em; 
+      margin: auto;
+      padding: 0;
+    }
+
+    #details img {
+      width: 100%;
+      height: auto;
+    }	
+  
+    
+}
+
+/* End venue details */
+
+/*slideshow using keyframes*/
+#slideshow {
+  position: relative;
+  width: 372px;
+  height: 248px;
+  overflow: hidden;
+  border: 1px solid black;
+  filter: drop-shadow(3px 3px 3px black);
+}
+
+#slideshow img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: slide 15s infinite;
+  animation-delay: 2s;
+}
+  
+@keyframes slide {
+  0% {
+    transform: translateX(0px)
+  }
+  25% {
+    transform: translateX(-383px)
+  }
+  50% {
+    transform: translateX(-766px)
+  }
+  75% {
+    transform: translateX(-1149px)
+  }
+  100% {
+    transform: translateX(-1532px)
+  }
+}
+/* End Slider*/
+
+/* End MainBody Styles */
+
+/*Footer Styles */
+
+.footer {
+    min-height: 200px;
+    background-color: slategrey;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Red Hat Display', sans-serif;
+    border-top: 0.5em black solid;
+}
+
+.footer p:first-child {
+    float: left;
+    text-align:left;
+    width: 60%;  
+}
+
+.footer p:nth-child(2) {
+    float: right;
+    text-align:right;
+    width: 20%;
+}
+
+.footer p:last-child{
+    float: right;
+    text-align:right;
+    width: 20%;
+}
+
+.footer a {
+	text-decoration: none;
+	color: #efefef;
+	
+}
+    
+.footer a:hover {
+    color: #FF00FF;
+  }
+.footer img {
+    padding-bottom: 30px;
+    filter: drop-shadow(4px 4px 4px black);
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+/* End Footer Styles */

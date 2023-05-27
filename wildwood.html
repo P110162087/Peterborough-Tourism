@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+
+<!-- NOTE: Web Crawlers welcome throughout site, so specifically allowed using the robots.txt file in the root, following robots protocol -->
+<!-- NOTE: since the nav menu is interactive, ARIA  labels included where necessary for accessibility --> 
+
+<html>
+
+  <head>
+    <title>Visit Peterborough - Peterborough Tourism</title><!-- SEO - site name is taking second place to name of top-ranked site in sector-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Visit Peterborough - Peterborough Tourism: Visiting Peterborough? See what to do, where to stay, and what's on in the beautiful, historic town of Peterborough."><!-- SEO - description covers top three tourism search terms, plus competes with top-ranked site in sector -->
+    <meta name="keywords" content="Visit, Peterborough, tourism, places, things to see, whats on, what to do, where to stay"><!-- keywords cover generic tourism base - deeper linked landing pages are more specific - note whats on without apostrophe for keyword-->
+    <meta name="author" content="P110162087"><!-- Moi -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon.png"><!-- A site without a favicon showing on the tab looks a bit too 'under construction' to me.  Amazing how many sites fail to use this easy branding advert -->
+    <link rel="stylesheet" href="./css/pt_styles.css"><!-- stylesheet - everything is all in one sheet - faster page loading, easier to find the code, and limits inheritance conflicts -->
+    
+    <!-- API call for my chosen google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
+    
+    <script src="./javascript/carousel.js"></script><!-- javascript file for the home page carousel - other image sliders are managed purely with css keyframes -->
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="menu_ribbon">
+
+        <div class="logo">
+          <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">
+          <h1>Peterborough Tourism</h1>
+        </div><!-- Logo -->
+
+        <nav role="navigation">
+
+          <!-- NOTE: top level menu items in reverse order as they are floated right -->
+          <!-- Only three items in each category, enough to show my approach -->
+          <!-- no contact links in the nav - it is becoming a design standard to have this in the page footer, and website visitors are learning to expect this -->
+          <ul>
+            <li><a href="./whats-on.html">What's On</a></li>
+
+            <li><a href="./accommodation.html">Accommodation</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./bull-hotel.html">The Bull Hotel</a></li>
+                <li><a href="./pearl-hotel.html">The Pearl Hotel</a></li>
+                <li><a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a></li>
+              </ul>
+            </li>
+                
+            <li><a href="./food-and-drink.html">Food & Drink</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./1498-the-spice-affair.html">1498 The Spice Affair</a></li>
+                <li><a href="./argo-lounge.html">Argo Lounge</a></li>
+                <li><a href="./wildwood.html">Wildwood</a></li>
+              </ul>
+            </li>
+
+            <li><a href="./activities.html">Activities</a>
+              <ul class="dropdown" aria-label="subenu">
+                <li><a href="./flag-fen.html">Flag Fen</a></li>
+                <li><a href="./peterborough-cathedral.html">Peterborough Cathedral</a></li>
+                <li><a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a></li>
+              </ul>
+            </li>
+                
+            <li><a href="./index.html">Home</a></li>
+                
+          </ul>   
+        </nav>
+      </div><!--menu ribbon -->
+            
+    </div><!-- header -->
+
+
+
+
+        <div id="intro-text">
+            <h1>Wildwood</h1>
+        </div>
+        <div id="details">
+
+            <div id="slideshow">
+                <img src="./images/wildwood/wildwood-slider.jpg"/>
+            </div>
+                
+            <div>
+                <h2>Wildwood</h2>
+                <p><b>Facilities:</b> Restaurant, Bar, Cafe, Home Delivery (Deliveroo / Just Eat)<br>
+                    <b>Cuisine:</b> Pizza, Italian, British<br>
+                    <b>Price Range:</b> ££ - £££<br><br>
+                <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g187045-d5230883-Reviews-Wildwood-Peterborough_Cambridgeshire_England.html" target="_blank"><img src="./images/link-images/tripadvisor.svg" style="border: 0; width: 94px; height: 20px;" alt="See this restaurant on Tripadvisor"></a>
+                <a href="https://wildwoodrestaurants.co.uk/restaurant/peterborough/" target="_blank"><small><b>>> Go to Wildwood's website</b></small></a>
+                </p>
+            </div>
+           
+
+        </div><!-- details-->
+        <p>Situated just across the Square from Peterborough Cathedral, Wildoows treats you to the best pizzas in town and a great range of pasta dishes, made in open kitchens at the back of the restaurant.<br>
+            There's a fantastic bar running down the centre of the restaurant, and they offer a very friendly service.<br>
+            Some outdoor seating is available with a view of Cathedral Square.</p>
+        <p>Wildwood even has its own cinema inside!  Book a movie and a meal for just £24.95 (Adults) or £9.95 (Kids).</p>
+    
+        <p>"Our well-balanced menu offers a wide grill selection and provides something for everyone. All produced by using fresh ingredients and serving up delicious food, every time. Including pizza and pasta dishes, as well as fresh salads, burgers, steaks, risottos and indulgent desserts. Little ones love our restaurants and the fun kids’ menu filled with age appropriate activities and healthy food."<br>
+            <small>-- From Wildwood's Website</small></p>
+
+    </body>
+
+
+</html>

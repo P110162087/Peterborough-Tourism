@@ -1,374 +1,366 @@
 <!DOCTYPE html>
+
+
+<!-- NOTE: Web Crawlers welcome throughout site, so specifically allowed using the robots.txt file in the root, following robots protocol -->
+<!-- NOTE: since the nav menu is interactive, ARIA  labels included where necessary for accessibility --> 
+
+<!-- NOTE: Library:  JQuery Library used for hamburger nav -->
+<!-- NOTE: API Calls: Google Fonts, Google Maps -->
+
 <html>
+
   <head>
-    <title>Visit Peterborough - Peterborough Tourism</title>
+    <title>Visit Peterborough - Peterborough Tourism</title><!-- SEO - site name is taking second place to name of top-ranked site in sector-->
     <meta charset="UTF-8">
-    <meta name="description" content="Visit Peterborough - Peterborough Tourism: Visiting Peterborough? This website has everything you need to know about what to do and where to stay in the beautiful, historic town of Peterborough.">
-    <meta name="keywords" content="Visit, Peterborough, tourism, places, holiday, weekend break, hotel, camping, pub, club, activities, restaurant, eat, dining, fun, medieval, roman, historic">
-    <meta name="author" content="P110162087">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./images/favicon.png">
-    <link rel="stylesheet" href="./css/pt_styles.css">
+    <meta name="description" content="Visit Peterborough - Peterborough Tourism: Visiting Peterborough? See what to do, where to stay, and what's on in the beautiful, historic town of Peterborough."><!-- SEO - description covers top three tourism search terms, plus competes with top-ranked site in sector -->
+    <meta name="keywords" content="Visit, Peterborough, tourism, places, things to see, whats on, what to do, where to stay"><!-- keywords cover generic tourism base - deeper linked landing pages are more specific - note whats on without apostrophe for keyword-->
+    <meta name="author" content="P110162087"><!-- Moi -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon.png"><!-- A site without a favicon showing on the tab looks a bit too 'under construction' to me.  Amazing how many sites fail to use this easy branding advert -->
+    <link rel="stylesheet" href="./css/pt_styles.css"><!-- stylesheet - everything is all in one sheet - faster page loading, easier to find the code, and limits inheritance conflicts -->
+    
+    <!-- API call for my chosen google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
-    <script src="./javascript/carousel.js"></script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons link -->
+    <script src="https://kit.fontawesome.com/55aeb2372e.js" crossorigin="anonymous"></script>-->
+
+    <script src="./javascript/navbar.js"></script><!-- script for responsive multi-level navbar -->
+    <script src="./javascript/carousel.js"></script><!-- javascript file for the home page carousel - other image sliders are managed purely with css keyframes -->
   </head>
-<!-- Oblox-->
+
   <body>
-    <div class="content">
-        <div class="top">
-          <div class="header">
-            
-            <div class="header-text">
-              <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50">
-                <h1>Peterborough Tourism</h1>
+    
+
+    
+
+    
+
+
+
+
+
+    <!--<header class="header">
+      <a href="./index.html" alt="Home" class="logo"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">Peterborough Tourism</a>
+      <nav role="navigation">
+
+          <!-- NOTE: top level menu items in reverse order as they are floated right -->
+          <!-- Only three items in each category, enough to show my approach -->
+          <!-- no contact links in the nav - it is becoming a design standard to have this in the page footer, and website visitors are learning to expect this -->
+          <!--<div class="menu-items">--
+
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+            <ul class="menu">
+            <li><a href="./whats-on.html">What's On</a></li>
+
+            <li><a href="./accommodation.html">Accommodation</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./bull-hotel.html">The Bull Hotel</a></li>
+                <li><a href="./pearl-hotel.html">The Pearl Hotel</a></li>
+                <li><a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a></li>
+              </ul>
+            </li>
                 
-            </div>
-          </div>
-        
-          <!-- NOTE: since the nav menu is interactive, ARIA  labels included where necessary for accessibility --> 
+            <li><a href="./food-and-drink.html">Food & Drink</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./1498-the-spice-affair.html">1498 The Spice Affair</a></li>
+                <li><a href="./argo-lounge.html">Argo Lounge</a></li>
+                <li><a href="./wildwood.html">Wildwood</a></li>
+              </ul>
+            </li>
 
-          
+            <li><a href="./activities.html">Activities</a>
+              <ul class="dropdown" aria-label="subenu">
+                <li><a href="./flag-fen.html">Flag Fen</a></li>
+                <li><a href="./peterborough-cathedral.html">Peterborough Cathedral</a></li>
+                <li><a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a></li>
+              </ul>
+            </li>
+                
+            <li><a href="./index.html">Home</a></li>
+                
+          </ul>
+          !--</div> menu-items --
+        </nav>
+            
+    </header> --
 
-          <div id="menu_ribbon">
-            <nav role="navigation">
-              <ul>
-                  <li class="ribbon"><a href="#">Home</a></li>
-                  <li class="ribbon"><a href="#">Activities</a>
-                      <ul class="dropdown" aria-label="submenu">
-                          <li><a href="#">Activity 1</a></li>
-                          <li><a href="#">Activity 2</a></li>
-                          <li><a href="#">Activity 3</a></li>
-                      </ul>
-                  </li>
-                  <li class="ribbon"><a href="#">Food & Drink</a>
-                    <ul class="dropdown" aria-label="submenu">
-                        <li><a href="#">Food & Drink 1</a></li>
-                        <li><a href="#">Food & Drink 2</a></li>
-                        <li><a href="#">Food & Drink 3</a></li>
-                    </ul>
-                    <li class="ribbon"><a href="#">Accommodation</a>
-                      <ul class="dropdown" aria-label="submenu">
-                          <li><a href="#">Accommodation 1</a></li>
-                          <li><a href="#">Accommodation 2</a></li>
-                          <li><a href="#">Accommodation 3</a></li>
-                      </ul>
-                </li>
-                  <li class="ribbon"><a href="about.html">About</a></li>
-              </ul>   
-          </nav> 
-        </div>
+    <header class="header">
+      <a href="" class="logo">CSS Nav</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>-->
+
+   <header>
+
+    
+
+
+<!--<nav role="navigation">-->
+    <div class="PTnav" id="navbar">
+
+      
+        <!--<div class="logo">
+        <a href="./index.html" alt="Home" class="logo"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">Peterborough Tourism</a>
+        </div>-->
+      
+    
+    <div class="dropdown" aria-label="submenu">
+      <button class="dropbtn"><a href="./accommodation.html">Accommodation <i class="fa fa-caret-down"></i></a>
+       
+      </button>
+      <div class="dropdown-content">
+        <a href="./bull-hotel.html">The Bull Hotel</a>
+        <a href="./pearl-hotel.html">The Pearl Hotel</a>
+        <a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a>
       </div>
+    </div>
 
-<!-- NOTE:  Edited version of the image slider appearing on https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-1-prev-next/ which includes accessibility contrast and ARIA labels-->
-
-      <section id="myCarousel"
-      class="carousel"
-      aria-roledescription="carousel"
-      aria-label="Peterborough Highlights">
-<div class="carousel-inner">
- <div class="controls">
-   <button type="button"
-           class="rotation pause"
-           aria-label="Stop automatic slide show">
-     <svg width="42"
-          height="34"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg">
-       <rect class="background"
-             x="2"
-             y="2"
-             rx="5"
-             ry="5"
-             width="38"
-             height="24"></rect>
-       <rect class="border"
-             x="4"
-             y="4"
-             rx="5"
-             ry="5"
-             width="34"
-             height="20"></rect>
-       <polygon class="pause" points="17 8 17 20"></polygon>
-       <polygon class="pause" points="24 8 24 20"></polygon>
-       <polygon class="play" points="15 8 15 20 27 14"></polygon>
-     </svg>
-   </button>
-   <button type="button"
-           class="previous"
-           aria-controls="myCarousel-items"
-           aria-label="Previous Slide">
-     <svg width="42"
-          height="34"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg">
-       <rect class="background"
-             x="2"
-             y="2"
-             rx="5"
-             ry="5"
-             width="38"
-             height="24"></rect>
-       <rect class="border"
-             x="4"
-             y="4"
-             rx="5"
-             ry="5"
-             width="34"
-             height="20"></rect>
-       <polygon points="9 14 21 8 21 11 33 11 33 17 21 17 21 20"></polygon>
-     </svg>
-   </button>
-   <button type="button"
-           class="next"
-           aria-controls="myCarousel-items"
-           aria-label="Next Slide">
-     <svg width="42"
-          height="34"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg">
-       <rect class="background"
-             x="2"
-             y="2"
-             rx="5"
-             ry="5"
-             width="38"
-             height="24"></rect>
-       <rect class="border"
-             x="4"
-             y="4"
-             rx="5"
-             ry="5"
-             width="34"
-             height="20"></rect>
-       <polygon points="9 11 21 11 21 8 33 14 21 20 21 17 9 17"></polygon>
-     </svg>
-   </button>
- </div>
- <div id="myCarousel-items"
-      class="carousel-items"
-      aria-live="off">
-   <div class="carousel-item active"
-        role="group"
-        aria-roledescription="slide"
-        aria-label="1 of 6">
-     <div class="carousel-image">
-       <a href="#">
-         <img src="./images/carousel/img1.png" alt="Sacrewell Farm">
-       </a>
-     </div>
-     <div class="carousel-caption">
-       <h3>
-         <a href="#" id="carousel-label-1">
-           Sacrewell Farm PNG
-         </a>
-       </h3>
-       <div class="hidden-xs hidden-sm">
-         <p>
-           <span class="descriptor">
-             Description of Place
-           </span>
-         </p>
-       </div>
-     </div>
-   </div>
-   <div class="carousel-item"
-        role="group"
-        aria-roledescription="slide"
-        aria-label="2 of 6">
-     <div class="carousel-image">
-       <a href="#">
-         <img src="./images/carousel/img2.jpg" alt="Sacrewell Farm">
-       </a>
-     </div>
-     <div class="carousel-caption">
-       <h3>
-         <a href="#" id="carousel-label-2">
-            Sacrewell Farm JPG
-         </a>
-       </h3>
-       <div>
-         <p>
-           <span class="descriptor">
-             Another description
-           </span>
-         </p>
-       </div>
-     </div>
-   </div>
-   <div class="carousel-item"
-        role="group"
-        aria-roledescription="slide"
-        aria-label="3 of 6">
-     <div class="carousel-image">
-       <a href="#">
-         <img src="./images/carousel/img3.gif" alt="MSacrewell Farm">
-       </a>
-     </div>
-     <div class="carousel-caption">
-       <h3>
-         <a href="#" id="carousel-label-3">
-            Sacrewell Farm GIF
-         </a>
-       </h3>
-       <div>
-        <p>
-            <span class="descriptor">
-              Description -tastic
-            </span>
-          </p>
-       </div>
-     </div>
-   </div>
-   <div class="carousel-item"
-        role="group"
-        aria-roledescription="slide"
-        aria-label="4 of 6">
-     <div class="carousel-image">
-       <a href="#">
-         <img src="./images/carousel/img1.png" alt="Sacrewell Farm">
-       </a>
-     </div>
-     <div class="carousel-caption">
-       <h3>
-         <a href="#" id="carousel-label-4">
-           Sacrewell Farm PNG
-         </a>
-       </h3>
-       <div>
-         <p>
-           <span class="descriptor">
-             Description
-           </span>
-         </p>
-       </div>
-     </div>
-   </div>
-   <div class="carousel-item"
-        role="group"
-        aria-roledescription="slide"
-        aria-label="5 of 6">
-     <div class="carousel-image">
-       <a href="#">
-         <img src="./images/carousel/img2.jpg" alt="Sacrewell Farm">
-       </a>
-     </div>
-     <div class="carousel-caption">
-       <h3>
-         <a href="#" id="carousel-label-5">
-            Sacrewell Farm JPG
-         </a>
-       </h3>
-       <div>
-        <p>
-            <span class="descriptor">
-              Description again
-            </span>
-          </p>
-       </div>
-     </div>
-   </div>
-   <div class="carousel-item"
-        role="group"
-        aria-roledescription="slide"
-        aria-label="6 of 6">
-     <div class="carousel-image">
-       <a href="#">
-         <img src="./images/carousel/img3.gif" alt="Sacrewell Farm">
-       </a>
-     </div>
-     <div class="carousel-caption">
-       <h3>
-         <a href="#" id="carousel-label-6">
-            Sacrewell Farm GIF
-         </a>
-       </h3>
-       <div class="hidden-xs hidden-sm">
-         <p>
-           <span class="descriptor">
-             Description of all things
-           </span>
-         </p>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-</section>
-<div class="col-sm-1"></div>
-            
-<!-- test calling simple javascript from page
-<script src="./javascript/fred.js"></script>    -->
-
-
-<div class="content">
-
-  <h2>Visit Peterborough!</h2> 
-  <h3>(It's probably not as bad as you've heard)</h3>
-  <p>Peterborough is a beautiful cathedral city in the north of Cambridgeshire, steeped in history, exquisite culture, and fantastic shopping.
-    This website was created to give you a taste of the abundant experiences that await the visitor, designed as a project for University Centre Peterborough.
+    <!--<div class="dropdown" aria-label="submenu">
+      <button class="dropbtn"><a href="./food-and-drink.html">Food & Drink <i class="fa fa-caret-down"></i></a> 
+        
+      </button>
+      <div class="dropdown-content">
+        <a href="./1498-the-spice-affair.html">1498 The Spice Affair</a>
+        <a href="./argo-lounge.html">Argo Lounge</a>
+        <a href="./wildwood.html">Wildwood</a>
+      </div>
+    </div> 
     
-    Highlights of Peterborough's History:
-
-    Peterborough has been occupied constantly since the Bronze Age, remains of the Iron Age settlement can be still be seen today.
-    The major Roman fort of Durobrivae is just five miles west on the famous Ermine Street, dating back to the Iron Age.
-    Sexwulf was granted lands here before AD 655 to build a great monastery, "no commonplace structure, but a Second Rome" as Candidus wrote, in what was then Medeshamstede in the Anglo-Saxon kingdon of Mercia.
-    Hereward the Wake harried the Norman invaders throughout the Fens in the 11th century, and famously attacked Peterborough's Abbey where William the Conqueror had stationed Norman knights.
-    The monastery had been razed by Vikings and the monks slaughtered, but in AD 1238 Peterborough Cathedral was built on the foundations of Sexwulf's monastery, giving rise to the motto "Upon This Rock" which appears in Peterborough's coat of arms.
-    Peterborough Cathedral played a significant part in the rebellion against King John, in Tudor history as the final resting place of Katherine of Aragon and the original burial place of Mary Queen of Scots (both buried by the celebrated 'Old Scarlett', a character who may have actually been the blueprint for William Shakespeare's gravedigger in Hamlet), and in the English Civil War when Royalists tried to resist Cromwell's troops who caused immense damage, and King Charles 1 was briefly imprisoned in the cathedral precincts.
-    Just to the North is the region known as South Holland, named for the hundreds of windmills that lined the banks of the River Welland in the 19th Century and the tulip growing and festivals in the area. Moulton windmill, 30 minutes away by car, is the largest windmill in the UK.
-    Whilst air raids devastated Britain during the Second World War, Peterborough got off relatively lightly, but in the worst night of the Blitz, 10th May 1941, the Priestage area was bombed heavily.
+    <div class="dropdown" aria-label="submenu">
+      <button class="dropbtn"><a href="./activities.html">Activities <i class="fa fa-caret-down"></i></a>
+        
+      </button>
+      <div class="dropdown-content">
+        <a href="./flag-fen.html">Flag Fen</a>
+        <a href="./peterborough-cathedral.html">Peterborough Cathedral</a>
+        <a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a>
+      </div>
+    </div>-->
     
-    Peterborough Today:
-
-    Peterborough is an educational centre of excellence boasting two universities in the city centre, fascinating museums, numerous historic buildings, and ongoing archaeological digs across the region which often welcome visitors.
-    The centre of Peterborough is fairly compact, so it's easy to enjoy historical and cultural tours, enticing city-centre shopping, a wide-range of quality eateries and a vibrant night life all without having to get behind the wheel, making it a great place for a stopover or a base for wider exploration.
-    Theatres and cinemas abound, and you can try your hand at any number of sporting pursuits: axe throwing, skydiving, archery, sailing and gliding to name a few, in the city or within very easy reach.
-    Peterborough is well served by transport links by road (the A1), rail, and air (Luton and Stansted are both about an hour away), making it a convenient hub for cultural tours of the East of England, the stunningly beautiful Norfolk coastline, London and the south east, or a convenient stopover en route to mainland Europe.
-    The weather is typically British (alas!), but is marked by lower rainfall than average, and a generally sunnier climate, and the largely flat landscape makes for huge, stunning skyscapes with frequent rainbows, and the extraordinary range of wildlife makes it a photographer's dream.
-    Whatever you want, Peterborough can offer, so why not visit Peterborough?  It's really not as bad as you've heard.  ;)</p>
-
-
-
-
-</div>
-                 
-        <div class="footer">
-            
-            <p>
-                <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50">
-                <br>
-                &copy; P110162087<br>
-                COM280: Web Design & Development<br>
-                2023
-            </p>
-
-            <p>Contact Us:<br>
-                <a href="./contact_us.html">Email</a><br>
-                <a href="./contact_us">Flat C<br>Minster Precincts<br>The Vineyard<br>Peterborough<br>PE1 1XU</a><br>
-                <!--T: 07759 089039<br>-->
-                <a href="https://en.wikipedia.org/wiki/IP_over_Avian_Carriers">Carrier Pigeon</a>
-            </p>
-
-            <p>Social Media:<br>
-                Email<br>
-                Telephone<br>
-                Snail Mail<br>
-                Carrier Pigeon
-            </p> 
-           
-                      
-        </div>
-            
-
-        </div>
-    </div>  
-  </body>
-
-
-
-
+    <a href="./whats-on.html">What's On</a>
+    <a href="./index.html" class="active">Home</a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="PTnavigation()"><i class="fa-solid fa-bars"></i></a>
+  </div>
+</nav>
   
+</header>
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- NOTE:  The home page image slider is an edited version of the carousel appearing on https://www.w3.org/WAI/ARIA/apg/patterns/carousel/examples/carousel-1-prev-next/ which includes accessibility contrast and ARIA labels-->
+    <!-- I've made it much more readable, annotated it to make it clearer, and modified it to make it more responsive and suit my application better-->
+  
+    <section id="myCarousel" class="carousel" aria-roledescription="carousel" aria-label="Peterborough Highlights">
+      <div class="carousel-inner">
+        <div class="controls">
+
+          <button type="button" class="rotation pause" aria-label="Stop automatic slide show">
+            <svg width="42" height="34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect class="background" x="2" y="2" rx="5" ry="5" width="38" height="24"></rect>
+              <rect class="border" x="4" y="4" rx="5" ry="5" width="34" height="20"></rect>
+              <polygon class="pause" points="17 8 17 20"></polygon>
+              <polygon class="pause" points="24 8 24 20"></polygon>
+              <polygon class="play" points="15 8 15 20 27 14"></polygon>
+            </svg>
+          </button>
+
+          <button type="button" class="previous" aria-controls="myCarousel-items" aria-label="Previous Slide">
+            <svg width="42" height="34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect class="background" x="2" y="2" rx="5" ry="5" width="38" height="24"></rect>
+              <rect class="border" x="4" y="4" rx="5" ry="5" width="34" height="20"></rect>
+              <polygon points="9 14 21 8 21 11 33 11 33 17 21 17 21 20"></polygon>
+            </svg>
+          </button>
+
+          <button type="button" class="next" aria-controls="myCarousel-items" aria-label="Next Slide">
+            <svg width="42" height="34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect class="background" x="2" y="2" rx="5" ry="5" width="38" height="24"></rect>
+              <rect class="border" x="4" y="4" rx="5" ry="5" width="34" height="20"></rect>
+              <polygon points="9 11 21 11 21 8 33 14 21 20 21 17 9 17"></polygon>
+            </svg>
+          </button>
+        </div><!-- controls -->
+
+        <!-- Carousel Content -->
+        <div id="myCarousel-items" class="carousel-items" aria-live="off">
+
+          <!-- Carousel Item 1 -->
+          <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="1 of 6">
+            <div class="carousel-image">
+              <a href="#"><img src="./images/carousel/img1.png" alt="Sacrewell Farm"></a>
+            </div><!-- carousel image -->
+            <div class="carousel-caption">
+              <h3><a href="#" id="carousel-label-1">Sacrewell Farm PNG</a></h3>
+              <div class="hidden-xs hidden-sm">
+                <p><span class="descriptor">Description of Place 1</span></p>
+              </div><!-- hidden-xs hidden-sm -->
+            </div><!-- carousel caption -->
+          </div><!-- carousel item active -->
+
+          <!-- Carousel Item 2 -->
+          <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="2 of 6">
+            <div class="carousel-image">
+              <a href="#"><img src="./images/carousel/img1.png" alt="Sacrewell Farm"></a>
+            </div><!-- carousel image -->
+            <div class="carousel-caption">
+              <h3><a href="#" id="carousel-label-1">Sacrewell Farm PNG</a></h3>
+              <div class="hidden-xs hidden-sm">
+                <p><span class="descriptor">Description of Place 2</span></p>
+              </div><!-- hidden-xs hidden-sm -->
+            </div><!-- carousel caption -->
+          </div><!-- carousel item active -->
+
+          <!-- Carousel Item 3 -->
+          <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="3 of 6">
+            <div class="carousel-image">
+              <a href="#"><img src="./images/carousel/img1.png" alt="Sacrewell Farm"></a>
+            </div><!-- carousel image -->
+            <div class="carousel-caption">
+              <h3><a href="#" id="carousel-label-1">Sacrewell Farm PNG</a></h3>
+              <div class="hidden-xs hidden-sm">
+                <p><span class="descriptor">Description of Place 3</span></p>
+              </div><!-- hidden-xs hidden-sm -->
+            </div><!-- carousel caption -->
+          </div><!-- carousel item active -->
+
+          <!-- Carousel Item 4 -->
+          <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="4 of 6">
+            <div class="carousel-image">
+              <a href="#"><img src="./images/carousel/img1.png" alt="Sacrewell Farm"></a>
+            </div><!-- carousel image -->
+            <div class="carousel-caption">
+              <h3><a href="#" id="carousel-label-1">Sacrewell Farm PNG</a></h3>
+              <div class="hidden-xs hidden-sm">
+                <p><span class="descriptor">Description of Place 4</span></p>
+              </div><!-- hidden-xs hidden-sm -->
+            </div><!-- carousel caption -->
+          </div><!-- carousel item active -->
+
+          <!-- Carousel Item 5 -->
+          <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="5 of 6">
+            <div class="carousel-image">
+              <a href="#"><img src="./images/carousel/img1.png" alt="Sacrewell Farm"></a>
+            </div><!-- carousel image -->
+            <div class="carousel-caption">
+              <h3><a href="#" id="carousel-label-1">Sacrewell Farm PNG</a></h3>
+              <div class="hidden-xs hidden-sm">
+                <p><span class="descriptor">Description of Place 5</span></p>
+              </div><!-- hidden-xs hidden-sm -->
+            </div><!-- carousel caption -->
+          </div><!-- carousel item active -->
+
+          <!-- Carousel Item 6 -->
+          <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="6 of 6">
+            <div class="carousel-image">
+              <a href="#"><img src="./images/carousel/img1.png" alt="Sacrewell Farm"></a>
+            </div><!-- carousel image -->
+            <div class="carousel-caption">
+              <h3><a href="#" id="carousel-label-1">Sacrewell Farm PNG</a></h3>
+              <div class="hidden-xs hidden-sm">
+                <p><span class="descriptor">Description of Place 6</span></p>
+              </div><!-- hidden-xs hidden-sm -->
+            </div><!-- carousel caption -->
+          </div><!-- carousel item active -->
+
+        </div><!-- My Carousel Items -->
+        <!--  End of Carousel Content-->
+      </div><!-- Carousel Inner -->
+    </section>
+    <div class="col-sm-1"></div>
+            
+
+
+
+    <div class="content">
+
+      <h2>Visit Peterborough!</h2>
+
+      <!-- top search result on Google is Visit Peterborough.  This content is arguably a bit long, but it's designed to compete with Visit Peterborough's search terms -->
+      <!-- With more time, I would have broken up this content with some images -->
+
+      <p>Peterborough is a beautiful cathedral city in the north of Cambridgeshire, steeped in history, exquisite culture, and fantastic shopping.<br>
+        This website was created to give you a taste of the abundant experiences that await the visitor, designed as a project for University Centre Peterborough.</p>
+    
+      <h3>Peterborough's [Potted] History:</h3>
+
+      <p>Peterborough has been occupied constantly since the Bronze Age, remains of the Iron Age settlement can be still be seen today.<br>
+        The major Roman fort of Durobrivae is just five miles west on the famous Ermine Street, dating back to the Iron Age.<br>
+       Sexwulf was granted lands here before AD 655 to build a great monastery, "no commonplace structure, but a Second Rome" as Candidus wrote, in what was then Medeshamstede in the Anglo-Saxon kingdon of Mercia.<br>
+       Hereward the Wake harried the Norman invaders throughout the Fens in the 11th century, and famously attacked Peterborough's Abbey where William the Conqueror had stationed Norman knights.<br>
+       The monastery had been razed by Vikings and the monks slaughtered, but in AD 1238 Peterborough Cathedral was built on the foundations of Sexwulf's monastery, giving rise to the motto "Upon This Rock" which appears in Peterborough's coat of arms.<br>
+       Peterborough Cathedral played a significant part in the rebellion against King John, in Tudor history as the final resting place of Katherine of Aragon and the original burial place of Mary Queen of Scots (both buried by the celebrated 'Old Scarlett', a character who may have actually been the blueprint for William Shakespeare's gravedigger in Hamlet), and in the English Civil War when Royalists tried to resist Cromwell's troops who caused immense damage, and King Charles 1 was briefly imprisoned in the cathedral precincts.<br>
+       Just to the North is the region known as South Holland, named for the hundreds of windmills that lined the banks of the River Welland in the 19th Century and the tulip growing and festivals in the area. Moulton windmill, 30 minutes away by car, is the largest windmill in the UK.<br>
+       Whilst air raids devastated Britain during the Second World War, Peterborough got off relatively lightly, but in the worst night of the Blitz, 10th May 1941, the Priestage area was bombed heavily.</p>
+    
+      <h3>Peterborough Today:</h3>
+
+      <p>Peterborough is an educational centre of excellence boasting two universities in the city centre, fascinating museums, numerous historic buildings, and ongoing archaeological digs across the region which often welcome visitors.<br>
+        The centre of Peterborough is fairly compact, so it's easy to enjoy historical and cultural tours, enticing city-centre shopping, a wide-range of quality eateries and a vibrant night life all without having to get behind the wheel, making it a great place for a stopover or a base for wider exploration.<br>
+        Theatres and cinemas abound, and you can try your hand at any number of sporting pursuits: axe throwing, skydiving, archery, sailing and gliding to name a few, in the city or within very easy reach.<br>
+        Peterborough is well served by transport links by road (the A1), rail, and air (Luton and Stansted are both about an hour away), making it a convenient hub for cultural tours of the East of England, the stunningly beautiful Norfolk coastline, London and the south east, or a convenient stopover en route to mainland Europe.<br>
+        The weather is typically British (alas!), but is marked by lower rainfall than average, and a generally sunnier climate, and the largely flat landscape makes for huge, stunning skyscapes with frequent rainbows, and the extraordinary range of wildlife makes it a photographer's dream.<br>
+        Whatever you want, Peterborough can offer it, so why not visit us here Peterborough?<br>
+        Besides, it's probably not as bad as you've heard.  ;)</p>
+    
+    </div><!-- content -->
+                 
+    <div class="footer">
+      <!-- NOTE: div elements inside footer class are counted with css for layout - if adding an extra column, be sure to wrap it in its own div and add new nth-child settings to the footer css -->
+      <!-- It's done this way rather than using a flex display just to show I can really - use of child elements is not generally well understood even by professional web developers -->
+      <!-- not all ids in the footer's div elements are not used, but may be helpful in future editing - and if not, they do no harm -->
+      <div id="about">
+        
+        <p><a href="./index.html" alt="Peterborough Tourism Home"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50"></a><br>
+          &copy; P110162087<br>
+          COM280: Web Design & Development<br>
+          2023
+        </p>
+      </div><!-- about -->
+      
+      <div id="contact">
+        <p>Contact Us:<br>
+          <a href="./contact_us.html#email">Email</a><br>
+          <a href="./contact_us.html#postal_address">Snail Mail<!-- Flat C, The Vineyard<br>Minster Precincts<br>Peterborough<br>PE1 1XU --></a><br>
+          <a href="./contact_us.html#telephone">Telephone</a><br>
+          <a href="./contact_us.html#carrier_pigeon">Carrier Pigeon</a><!-- Just for a giggle ;) -->
+        </p>
+      </div><!-- contact -->
+
+      <!-- NOTE: these are null links - I haven't created dummy social media accounts for this project as they would be publicly accessible, so they go to the site's home page -->
+      <!-- If I'd had live accounts, I would be tempted to place them at the top of the page - people don't always make it to the bottom of the page -->
+      <!-- And Social Media links are likely to have fresher content than a static website, so it gives more chances for visitors to see it -->
+      <!-- Twitter would have been my primary link in the past, but Elon Musk's had hiswicked way and the result is dramatically reduced user engagement, so now it's in last place -->
+      
+      <div id="social">
+        <!-- all off site links opened in new tab/window, so visitor doesn't leave site completely and can easily return -->
+        <p>Social Media:<br><br>
+          <a href="https://www.facebook.com" target="_blank" alt="Find Us on Facebook"><img src="./images/link-images/facebook.png"></a>
+          <a href="https://www.whatsapp.com" target="_blank" alt="Message Us on Whatsapp"><img src="./images/link-images/whatsapp.png"></a>
+          <a href="https://www.twitter.com" target="_blank" alt="See What We've Been Tweeting"><img src="./images/link-images/twitter.png"></a>
+        </p>
+      </div><!-- social -->
+                     
+    </div><!-- footer -->
+            
+  </body>
 </html>

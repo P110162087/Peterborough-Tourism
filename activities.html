@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+
+<!-- NOTE: Web Crawlers welcome throughout site, so specifically allowed using the robots.txt file in the root, following robots protocol -->
+<!-- NOTE: since the nav menu is interactive, ARIA  labels included where necessary for accessibility --> 
+
+<html>
+
+  <head>
+    <title>Visit Peterborough - Peterborough Tourism</title><!-- SEO - site name is taking second place to name of top-ranked site in sector-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Visit Peterborough - Peterborough Tourism: Visiting Peterborough? See what to do, where to stay, and what's on in the beautiful, historic town of Peterborough."><!-- SEO - description covers top three tourism search terms, plus competes with top-ranked site in sector -->
+    <meta name="keywords" content="Visit, Peterborough, tourism, places, things to see, whats on, what to do, where to stay"><!-- keywords cover generic tourism base - deeper linked landing pages are more specific - note whats on without apostrophe for keyword-->
+    <meta name="author" content="P110162087"><!-- Moi -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./images/favicon.png"><!-- A site without a favicon showing on the tab looks a bit too 'under construction' to me.  Amazing how many sites fail to use this easy branding advert -->
+    <link rel="stylesheet" href="./css/pt_styles.css"><!-- stylesheet - everything is all in one sheet - faster page loading, easier to find the code, and limits inheritance conflicts -->
+    
+    <!-- API call for my chosen google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
+    
+    <script src="./javascript/carousel.js"></script><!-- javascript file for the home page carousel - other image sliders are managed purely with css keyframes -->
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="menu_ribbon">
+
+        <div class="logo">
+          <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">
+          <h1>Peterborough Tourism</h1>
+        </div><!-- Logo -->
+
+        <nav role="navigation">
+
+          <!-- NOTE: top level menu items in reverse order as they are floated right -->
+          <!-- Only three items in each category, enough to show my approach -->
+          <!-- no contact links in the nav - it is becoming a design standard to have this in the page footer, and website visitors are learning to expect this -->
+          <ul>
+            <li><a href="./whats-on.html">What's On</a></li>
+
+            <li><a href="./accommodation.html">Accommodation</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./bull-hotel.html">The Bull Hotel</a></li>
+                <li><a href="./pearl-hotel.html">The Pearl Hotel</a></li>
+                <li><a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a></li>
+              </ul>
+            </li>
+                
+            <li><a href="./food-and-drink.html">Food & Drink</a>
+              <ul class="dropdown" aria-label="submenu">
+                <li><a href="./1498-the-spice-affair.html">1498 The Spice Affair</a></li>
+                <li><a href="./argo-lounge.html">Argo Lounge</a></li>
+                <li><a href="./wildwood.html">Wildwood</a></li>
+              </ul>
+            </li>
+
+            <li><a href="./activities.html">Activities</a>
+              <ul class="dropdown" aria-label="subenu">
+                <li><a href="./flag-fen.html">Flag Fen</a></li>
+                <li><a href="./peterborough-cathedral.html">Peterborough Cathedral</a></li>
+                <li><a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a></li>
+              </ul>
+            </li>
+                
+            <li><a href="./index.html">Home</a></li>
+                
+          </ul>   
+        </nav>
+      </div><!--menu ribbon -->
+            
+    </div><!-- header -->
+
+
+    <div id="intro-text">
+      <h1>Peterborough Activities</h1>
+      <p>There's so much to do in Peterborough it's hard to know where to start! Maybe a swim at Peterborough Lido? A spot of axe throwing if you're up for something a little more strenuous?  How about skydiving or gliding at Crowland Airfield? If sports are not your thing, then why not try cookery, pottery, or art lessons?
+        The options are endless, but we've picked a few places to go here that highlight Peteborough's cultural heritage, which should get you started. Have fun!</p>
+  </div>
+
+  <div id="link-block">
+      <div>
+          <a href="./flag-fen.html"><img src="./images/flag-fen/flag-fen-1.jpg" alt="Flag Fen - Anglo Saxon Living History" width="300" height="200"></a>
+      </div>
+      <div>
+          <a href="./flag-fen.html"> <h2>Flag Fen</h2></a>
+          <p><b>Facilities:</b> Restaurant, Home Delivery (Deliveroo / Just Eat)<br>
+              <b>Cuisine:</b> Goan Indian<br>
+              <b>Price Range:</b> ££</p>
+          <p>Authentic Goan Indian cuisine, a delicious fusion of Indian and Portuguese flavours, with an enciable reputation as one of the best restaurants that Peterborough has to offer. Licensed to serve alcohol with your meal.</p>
+      </div>
+  </div>
+
+  <div id="link-block">
+      <div>
+          <a href="./peterborough-cathedral.html"><img src="./images/cathedral/peterborough-cathedral-1.jpg" alt="Peterborough cathedral - Gothic Masterpiece" width="300" height="200"></a>
+      </div>
+      <div>
+          <a href="./peterborough-cathedral.html"><h2>Peterborough Cathedral</h2></a>
+          <p><b>Facilities:</b> Restaurant, Bar, Cafe<br>
+              <b>Cuisine:</b> International, Vegetarian<br>
+              <b>Price Range:</b> ££ - £££</p>
+          <p>Situated next to the Peterborough Cathedral main entrance gates, Argo Lounge offers a stylish dining experience with a well-stocked bar. Be sure to check out their sublime desserts! Some outdoor seating available.</p>
+      </div>
+  </div>
+  <div id="link-block">
+      <div>
+          <a href="./peterborough-museum-and-art-gallery.html"><img src="./images/museum/peterborough-museum-and-art-gallery-1.jpg" alt="Peterborough Museum & Art Galleru" width="300" height="200"></a>
+      </div>
+      <div>
+          <a href="./peterborough-museum-and-art-gallery.html"><h2>Peterborough Museum & Art Gallery</h2></a>
+          <p><b>Facilities:</b> Restaurant, Bar, Cafe, Home Delivery (Deliveroo / Just Eat)<br>
+              <b>Cuisine:</b> Pizza, Italian, British<br>
+              <b>Price Range:</b> ££ - £££</p>
+              <p>Situated just across the sSuare from Peterborough Cathedral, Wildoows treats you to the best pizzas in town and a great range of pasta dishes, made in open kitchens at the back of the restaurant. There's a fantastic bar running down the centre. Very friendly service. Some outdoor seating available.</p>
+      </div>
+  </div>
+  Opening Times
+  Accessibility, loud Noise, crowds, kids welcome, over 18s, 
+  entrance fee adults, kids, family ticket
+
+ 
+  </div>
+
+    </body>
+    </html>

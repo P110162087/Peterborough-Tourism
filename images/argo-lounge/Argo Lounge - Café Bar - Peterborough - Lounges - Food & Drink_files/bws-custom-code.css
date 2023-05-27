@@ -1,0 +1,16 @@
+p.cptch_block{
+  	display: none !important;
+	width: 100% !important; 
+}
+
+div#cptch_slide_captcha_container{
+	width: 100% !important; 
+}
+
+span.bwscaptcha-777{
+	color: white !important;
+}
+
+span.bwscaptcha-777 span{
+ 	color: white !important; 
+}
