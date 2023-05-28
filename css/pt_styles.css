@@ -20,8 +20,7 @@
 body {
   font-family: 'Red Hat Display', sans-serif;
   color: black;
-  margin: 3px;
-}
+  }
 
 
 .content {
@@ -55,24 +54,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* NOTE: Legacy Browsers */ 
 /* Internet Explorer was officially retired in June 2022 */ 
 /* and accounted for less than 1% of internet traffice in May 2021, and this site is aimed primarily at mobile users anyway */
@@ -82,368 +63,17 @@ body {
 
 /* Nav Styles */
 
-
-
-
-
-/*.menu_ribbon {
-  /* position: fixed; /* breaks carousel - sticky not working 
-  width: 100%;
-  background: #666;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
-}
-
-.logo {
-  display: block;
-  float:left;
-  align-items: center;
-}
-
-/* nav {
-	
-} 
-
-a {
-  text-decoration: none;
-}
-
-nav ul {
-  background: #666;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-nav li {
-	color: white;
-  background: #666;
-	display: block;
-	float: right;
-	position: relative;
-	text-decoration: none;
-  transition-duration: 0.5s;
-}
-  
-nav li a {
-  color: white;
-  font-size: 1.4vw;
-}
-
-nav li:hover {
-	background: #992915;
-	cursor: pointer;
-}
-
-nav ul li ul {
-	background: slategrey;
-	visibility: hidden;
-  opacity: 0;
-	position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1rem;
-	left: 0;
-  display: none;
-}
-
-nav ul li ul a {
-  font-size: 1.2vw;
-}
-
-nav ul li:hover > ul,
-nav ul li:focus-within > ul, /* keeps menu bar list item active when a sub menu is selected 
-nav ul li ul:hover {
-  visibility: visible;
-  opacity: 1;
-  display: block;
-}
-
-nav ul li ul li {
-	clear: both;
-  width: 100%;
-}
-/*
-.dropdown {
-  display:flexbox;
-}
-
-.dropdown li {
-  z-index: 999999;
-  transition: all 0.1s ease-in-out 0.1s, visibility 0.2s linear 0.2s, z-index 0.2s linear 0.2s;
-  width: 13rem;
-}
-
-.dropdown li:last-child {
-  border-bottom: 3px solid black;
-}
-
-
-/* for hamburger 
-
-.menu_ribbon .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-/*
-/*.menu_ribbon .logo {
-  display: block;
+.PTnav a.logo {
   float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-}*/
-
-
-
-
-/* menu ribbon
-
-.menu_ribbon .menu-items {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-}
-/* menu button and icon OK */
-
-
-/* menu icon 
-
-.menu_ribbon .menu-icon {
-  cursor: pointer;
-  display: block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
+  display:flex;
+  vertical-align: middle;
 }
 
-.menu_ribbon .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.menu_ribbon .menu-icon .navicon:before,
-.menu_ribbon .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.menu_ribbon .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.menu_ribbon .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn 
-
-.menu_ribbon .menu-btn {
-  display: none;
-}
-
-.menu_ribbon .menu-btn:checked ~ .menu-items {
-  max-height: 240px;
-}
-
-.menu_ribbon .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.menu_ribbon .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.menu_ribbon .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.menu_ribbon .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.menu_ribbon .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-
-
-
-/* 48em = 768px 
-
-@media (min-width: 48em) {
-  .menu_ribbon li {
-    float: left;
-  }
-  .menu_ribbon li a {
-    padding: 20px 30px;
-  }
-  .menu_ribbon .menu-items {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .menu_ribbon .menu-icon {
-    display: none;
-  }
-}
-
-
-
-
-/* for hamburger */
-/* End of Nav Styles */
-
-
-/*  NEW NAV STYLES  */
-
-/* header *
-
-.header {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
-}
-
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  padding: 10px 20px;
-  text-decoration: none;
-}
-
-/* menu *
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
-}
-
-/* menu icon *
-
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn *
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-/* 48em = 768px *
-
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-
-/*ANOTHER NAV */
-
-
-
-
-/* END NEW NAV STYLES */
-
-
-
-.PTnav .logo {
-  float:left;
+.PTnav a.logo img {
+  height: 35px;
+  width: 35px;
+  padding:0px;
+  margin-right: 10px;
 }
 
 .PTnav {
@@ -451,21 +81,24 @@ nav ul li ul li {
   background-color: #666;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+  height:80px;
 }
 
 .PTnav a {
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  height: 100%;
 }
 
 .active {
   background-color: darkorange;
   color: white;
+  height: 100%;
 }
 
 .PTnav .icon {
@@ -473,7 +106,7 @@ nav ul li ul li {
 }
 
 .dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 
@@ -482,10 +115,10 @@ nav ul li ul li {
   border: none;
   outline: none;
   color: white;
-  /* padding: 14px 16px; */
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  height:100%;
 }
 
 .dropdown-content {
@@ -509,6 +142,7 @@ nav ul li ul li {
 .PTnav a:hover, .dropdown:hover .dropbtn {
   background-color: #555;
   color: white;
+  height: 100%;
 }
 
 .dropdown-content a:hover {
@@ -521,9 +155,13 @@ nav ul li ul li {
 }
 
 @media screen and (max-width: 600px) {
+  .PTnav {
+    height: auto;
+  }
   .PTnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
+
   .PTnav a.icon {
     float: right;
     display: block;
@@ -531,17 +169,26 @@ nav ul li ul li {
 }
 
 @media screen and (max-width: 600px) {
-  .PTnav.responsive {position: relative;}
+  
+
+  .PTnav.responsive {
+    position: relative;
+    
+  }
+
   .PTnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
+
   }
+
   .PTnav.responsive a {
     float: none;
     display: block;
     text-align: left;
   }
+
   .PTnav.responsive .dropdown {float: none;}
   .PTnav.responsive .dropdown-content {position: relative;}
   .PTnav.responsive .dropdown .dropbtn {
@@ -550,6 +197,10 @@ nav ul li ul li {
     text-align: left;
   }
 }
+
+
+/* END Nav Styles */
+
 
 /* Main Body Styles *
 
