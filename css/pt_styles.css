@@ -29,28 +29,6 @@ body {
 }
 
 
-/*
-.header {
-  display: flex;
-  z-index: 999999;
-}
-
-.header .logo {
-  display:flex;
-  align-items: center;
-  margin-left: 10px;
-}
-
-#header .logo h1 {
-  color: white;
-  margin-left: 10px;
-  font-size: 1.6vw;
-  
-} */
-
-#intro-text h1, h2, p {
-  padding-left: 10px;
-}
 
 
 
@@ -65,15 +43,15 @@ body {
 
 .PTnav a.logo {
   float: left;
-  display:flex;
-  vertical-align: middle;
+  display: flex;
 }
 
-.PTnav a.logo img {
-  height: 35px;
-  width: 35px;
-  padding:0px;
-  margin-right: 10px;
+.PTnav img {
+  height: 50px;
+  width: 200px;
+  padding: 0;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .PTnav {
@@ -81,7 +59,7 @@ body {
   background-color: #666;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  height:80px;
+  height: 62px;
 }
 
 .PTnav a {
@@ -89,9 +67,9 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 8px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 16px;
   height: 100%;
 }
 
@@ -103,6 +81,9 @@ body {
 
 .PTnav .icon {
   display: none;
+  height: 100%;
+  padding-right: 10px;
+  font-size: 17pt;
 }
 
 .dropdown {
@@ -111,7 +92,7 @@ body {
 }
 
 .dropdown .dropbtn {
-  font-size: 17px;    
+  font-size: 16px;    
   border: none;
   outline: none;
   color: white;
@@ -127,13 +108,13 @@ body {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 999999999;
+  z-index: 999;
 }
 
 .dropdown-content a {
   float: none;
   color: #666;
-  padding: 12px 16px;
+  padding: 8px 12px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -154,7 +135,7 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .PTnav {
     height: auto;
   }
@@ -166,10 +147,6 @@ body {
     float: right;
     display: block;
   }
-}
-
-@media screen and (max-width: 600px) {
-  
 
   .PTnav.responsive {
     position: relative;
@@ -269,6 +246,7 @@ img.reload {
   background-color: rgb(0 0 0 / 65%);
   border-radius: 5px;
   border: 0 solid transparent;
+  font-size: 14px;
 }
 
 .carousel-items .carousel-image a {
@@ -281,7 +259,6 @@ img.reload {
 .carousel-item .carousel-caption a {
   display: inline-block;
   margin: 0;
-  padding: 6px;
   color: black;
   background-color: transparent;
   border-radius: 5px;
@@ -307,8 +284,8 @@ img.reload {
 }
 
 .carousel .carousel-item .carousel-caption p {
-  font-size: 1em;
-  line-height: 1.5;
+  /* font-size: 1em;*/
+  line-height: 1;
   margin-bottom: 0;
 }
 
@@ -317,8 +294,8 @@ img.reload {
   right: 15%;
   bottom: 0;
   left: 15%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 10px;
   color: #fff;
   text-align: center;
 }
@@ -328,7 +305,7 @@ img.reload {
 .carousel .controls {
   box-sizing: border-box;
   position: absolute;
-  top: 1em;
+  top: 5px;
   z-index: 10;
   display: flex;
   width: 100%;
@@ -347,27 +324,105 @@ img.reload {
 }
 
 .carousel .controls button.previous {
-  right: 70px;
+  right: 65px;
+}
+
+.carousel .controls button.previous-small {
+  display:none;
 }
 
 .carousel .controls button.next {
-  right: 18px;
+  right:18px;
 }
+
+.carousel .controls button.next-small {
+  display: none;
+}
+
+.carousel .controls button.rotation-small {
+  display: none;
+}
+
+.carousel .controls button.pause-small {
+  display: none;
+}
+
+
+@media (max-width: 800px) {
+
+
+
+  .carousel .carousel-item .carousel-caption a,
+  .carousel .carousel-item .carousel-caption span.descriptor {
+    padding:3px;
+  }
+
+    
+
+  .carousel .carousel-item .carousel-caption a,
+  .carousel .carousel-item .carousel-caption span.descriptor {
+    font-size: 10px;
+  }
+
+  .carousel .carousel-item .carousel-caption {
+    padding-bottom: 6px;
+  }
+
+  .carousel .controls {
+    top:0;
+  }
+
+  .carousel .controls button.previous {
+    display:none;
+  }
+
+  .carousel .controls button.previous-small {
+    display: flex;
+    right: 38px;
+  }
+
+  .carousel .controls button.next {
+    display:none;
+  
+  }  
+  
+  .carousel .controls button.next-small {
+    display: flex;
+    right: 5px;
+  }
+}
+
 
 /* SVG Controls */
 
-.carousel .controls svg .background {
+.carousel .controls svg.sml-svg .background {
+  visibility: hidden;
   stroke: black;
   fill: black;
   stroke-width: 1px;
   opacity: 0.6;
 }
 
-.carousel .controls svg .border {
+.carousel .controls svg.sml-svg .border {
+  visibility:hidden;
   fill: transparent;
   stroke: transparent;
   stroke-width: 2px;
 }
+
+.carousel .controls svg.lrg-svg .background {
+  stroke: black;
+  fill: black;
+  stroke-width: 1px;
+  opacity: 0.6;
+}
+
+.carousel .controls svg.lrg-svg .border {
+  fill: transparent;
+  stroke: transparent;
+  stroke-width: 2px;
+}
+
 
 .carousel .controls svg .pause {
   stroke-width: 4;
@@ -379,6 +434,73 @@ img.reload {
   stroke-width: 1;
   fill: transparent;
   stroke: transparent;
+}
+
+.carousel .controls svg .play-small {
+  visibility:hidden;
+}
+
+.carousel .controls svg .pause-small {
+  visibility:hidden
+}
+
+
+
+
+@media (max-width: 800px) { 
+  .carousel .controls svg.sml-svg .background {
+    visibility:visible;
+
+  }
+  
+  .carousel .controls svg.sml-svg .border {
+    visibility:visible;
+
+  }
+
+  .carousel .controls svg.lrg-svg .background {
+    visibility:hidden;
+
+  }
+  
+  .carousel .controls svg.lrg-svg .border {
+    visibility:hidden;
+
+  }
+
+  .carousel .controls svg .pause {
+    visibility:hidden
+  }
+
+  .carousel .controls svg .play {
+
+    visibility:hidden;
+  }
+
+.carousel .controls svg .play-small {
+  visibility:visible;
+  stroke-width: 1;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.carousel .controls svg .pause-small {
+  visibility: visible;
+  stroke-width: 4;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.carousel .controls .pause svg .pause-small {
+  fill: white;
+  stroke: white;
+}
+
+.carousel .controls .play svg .play-small {
+  fill: white;
+  stroke: white;
+}
+
 }
 
 .carousel .controls .pause svg .pause {
@@ -412,6 +534,11 @@ img.reload {
 
 
 
+#intro-text {
+  padding-left: 10px;
+  
+}
+
 /* Styles for nav main category pages with image links */
 
 #link-block {
@@ -423,112 +550,75 @@ img.reload {
   box-sizing: border-box;
   background-color: #f3f3f3;
   display: table;
+  padding-top: 6px;
+  padding-bottom: 9px;
+  padding-left:6px;
 }
 
 #link-block div {
   display: table-cell;
   vertical-align: top;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
 }
 
-#link-block img {
+#link-block img.not-slides  { /* .not-slides distinguishes images in link-blocks from slide sets in img containers - :not() failed to work correctly*/
   display: block;
   border: 1px solid #000;
+  float: left;
+  margin: 6px;
 }
 
-#link-block h2, p {
+#link-block h2, h3, p {
   vertical-align: text-top;
+  padding: 0px;
+}
+
+.venue {
+  padding-left: 15px;
+
 }
 
 #link-block a {
   text-decoration: none;
 }
 
-@media ( max-width: 30em ) {
+@media ( max-width: 800px) {
 
-    #link-block {
-      display: block;
-      padding: 0.5em;
-    }
-   
-   #link-block div {
-      display: block;
-      width: 94%;
-      max-width: 16.25em; 
-      margin: auto;
-      padding: 0;
-    }
-  
-    #link-block img {
-      width: 100%;
-      height: auto;
-    }	
-}
-
-/* End stykes for nav main category pages with image links */
-
-/* Stykes for venue details section*/
-   
-#details {
-  height: auto;
-  width: 99%;
-  margin: auto;
-  margin-bottom: 5px;
-  display: table;
-}
-
-#details div {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-}
-
-#details img {
-  display: block;
-  border: 1px solid #000;
-}
-
-#details h2 {
-  vertical-align: text-top;
-}
-
-#details a {
-  text-decoration: none;
-}
-
-@media ( max-width: 30em ) {
-
-  #details {
+  #link-block {
     display: block;
-    padding: 0.5em;
   }
-   
-  #details div {
+ 
+ #link-block div {
     display: block;
-    width: 94%;
-    max-width: 16.25em; 
     margin: auto;
     padding: 0;
   }
 
-  #details img {
-    width: 100%;
+  #link-block img.not-slides { 
     height: auto;
+    width: 98%;
   }	
-   
+
+  }
 }
 
-/* End venue details */
+@media (max-width: 600px) {
+  
+  #link-block img.not-slides {
+    float: none;
+    display: block;
+    border: 1px solid #000;
+    margin: 6px;
+    width: 96%;
+  }
+
+}
 
 /*slideshow using keyframes*/
 #slideshow {
-  position: relative;
-  width: 372px;
-  height: 248px;
+  padding: 0 !important;
+  display:table-cell;
+  width: 372px !important;
+  height: 248px !important;
   overflow: hidden;
   border: 1px solid black;
   filter: drop-shadow(3px 3px 3px black);
@@ -560,6 +650,8 @@ img.reload {
   }
 }
 /* End Slider*/
+
+/* End styles for nav main category pages with image links */
 
 /* End MainBody Styles */
 
@@ -636,7 +728,32 @@ img.reload {
   filter: drop-shadow(4px 4px 5px whitesmoke);
 }
 
+@media (max-width: 899px) {
 
-@media (max-width=);
+  .footer #social img {
+    width: 30px; 
+    height: 30px;
+    margin-left: 6px;
+    margin-top: 8px;
+    
+  
+  }
+}
+
+@media (max-width: 500px) {
+
+  .footer {
+font-size: 10px;
+
+  }
+  .footer #social img {
+    width: 20px; 
+    height: 20px;
+    margin-left: 6px;
+    margin-top: 8px;
+    
+  
+  }
+}
 
 /* End Footer Styles */
