@@ -179,11 +179,7 @@ body {
 /* END Nav Styles */
 
 
-/* Main Body Styles *
-
-#main {
-    min-height: 250px;
-}
+/* Main Body Styles */
 
 /* Home Page Carousel Styles */
 
@@ -350,14 +346,10 @@ img.reload {
 
 @media (max-width: 800px) {
 
-
-
   .carousel .carousel-item .carousel-caption a,
   .carousel .carousel-item .carousel-caption span.descriptor {
     padding:3px;
   }
-
-    
 
   .carousel .carousel-item .carousel-caption a,
   .carousel .carousel-item .carousel-caption span.descriptor {
@@ -423,7 +415,6 @@ img.reload {
   stroke-width: 2px;
 }
 
-
 .carousel .controls svg .pause {
   stroke-width: 4;
   fill: transparent;
@@ -445,27 +436,21 @@ img.reload {
 }
 
 
-
-
 @media (max-width: 800px) { 
   .carousel .controls svg.sml-svg .background {
     visibility:visible;
-
   }
   
   .carousel .controls svg.sml-svg .border {
     visibility:visible;
-
   }
 
   .carousel .controls svg.lrg-svg .background {
     visibility:hidden;
-
   }
   
   .carousel .controls svg.lrg-svg .border {
     visibility:hidden;
-
   }
 
   .carousel .controls svg .pause {
@@ -473,7 +458,6 @@ img.reload {
   }
 
   .carousel .controls svg .play {
-
     visibility:hidden;
   }
 
@@ -543,7 +527,7 @@ img.reload {
 
 #link-block {
   height: auto;
-  width: 99%;
+  width: 100%;
   margin: auto;
   margin-bottom: 5px;
   border: 1.5px solid black;
@@ -552,7 +536,7 @@ img.reload {
   display: table;
   padding-top: 6px;
   padding-bottom: 9px;
-  padding-left:6px;
+  padding-left: 6px;
 }
 
 #link-block div {
@@ -567,6 +551,12 @@ img.reload {
   margin: 6px;
 }
 
+#link-block img.slides {
+display:flex;
+margin: 0;
+float: left;
+
+}
 #link-block h2, h3, p {
   vertical-align: text-top;
   padding: 0px;
@@ -581,16 +571,37 @@ img.reload {
   text-decoration: none;
 }
 
+
+
+.map {
+  display: block;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.map iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
 @media ( max-width: 800px) {
 
   #link-block {
     display: block;
+
   }
  
  #link-block div {
     display: block;
     margin: auto;
-    padding: 0;
+    padding: 5px;
   }
 
   #link-block img.not-slides { 
@@ -598,8 +609,12 @@ img.reload {
     width: 98%;
   }	
 
-  }
+
+
+ 
+
 }
+
 
 @media (max-width: 600px) {
   
@@ -615,7 +630,7 @@ img.reload {
 
 /*slideshow using keyframes*/
 #slideshow {
-  padding: 0 !important;
+  padding: 0;
   display:table-cell;
   width: 372px !important;
   height: 248px !important;
@@ -630,6 +645,22 @@ img.reload {
   top: 0;
   animation: slide 15s infinite;
   animation-delay: 2s;
+}
+
+@media (min-width:421px) and (max width: 500px) {
+max-width: 383px;
+
+}
+
+@media (max-width: 420px) {
+
+
+  #slideshow {
+    margin-left: 0 !important;
+    width: 95% !important;
+  }
+    
+
 }
   
 @keyframes slide {
