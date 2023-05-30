@@ -543,7 +543,7 @@ img.reload {
 
 #link-block div {
   display: table-cell;
-  vertical-align: top;
+  vertical-align: text-top;
 }
 
 #link-block img.not-slides  { /* .not-slides distinguishes images in link-blocks from slide sets in img containers - :not() failed to work correctly*/
@@ -560,11 +560,14 @@ margin: 0;
 float: left;
 
 }
+
 #link-block h2, h3, p, q {
-  vertical-align: text-top;
+  vertical-align: top;
   padding-left: 10px;
   padding-right:10px;
 }
+
+
 
 .venue {
   padding-left: 15px;
@@ -573,6 +576,8 @@ float: left;
 
 #link-block a {
   text-decoration: none;
+  padding-left: 10px;
+  font-weight: bold;
 }
 
 .map {
@@ -592,6 +597,43 @@ float: left;
   width:100%;
   position:absolute;
 }
+
+/* Styles for the Whats On page blocks - these are a little different to the link-blocks used on pother pages */
+
+#event {
+  display:block;
+  float: left;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  padding-bottom:5px;
+  width: 100%;
+}
+
+#event h2, h3, p {
+  vertical-align: text-top;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#event img {
+  display: flex;
+  float:left;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+
+#event a {
+  text-decoration: none;
+  font-size: smaller;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+/* END of what's on page event blocks */
 
 @media ( max-width: 800px) {
 

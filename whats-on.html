@@ -21,63 +21,157 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
     
-    <script src="./javascript/carousel.js"></script><!-- javascript file for the home page carousel - other image sliders are managed purely with css keyframes -->
+    <!-- Font Awesome icons link -->
+    <script src="https://kit.fontawesome.com/55aeb2372e.js" crossorigin="anonymous"></script>
+
+   <script src="./javascript/navbar.js"></script><!-- script for responsive multi-level navbar -->
+    <!--<script src="./javascript/hamburger.js"></script>-->
   </head>
 
   <body>
-    <div id="header">
-      <div class="menu_ribbon">
+    
+    <header>
 
-        <div class="logo">
-          <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">
-          <h1>Peterborough Tourism</h1>
-        </div><!-- Logo -->
-
-        <nav role="navigation">
-
-          <!-- NOTE: top level menu items in reverse order as they are floated right -->
-          <!-- Only three items in each category, enough to show my approach -->
-          <!-- no contact links in the nav - it is becoming a design standard to have this in the page footer, and website visitors are learning to expect this -->
-          <ul>
-            <li><a href="./whats-on.html">What's On</a></li>
-
-            <li><a href="./accommodation.html">Accommodation</a>
-              <ul class="dropdown" aria-label="submenu">
-                <li><a href="./bull-hotel.html">The Bull Hotel</a></li>
-                <li><a href="./pearl-hotel.html">The Pearl Hotel</a></li>
-                <li><a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a></li>
-              </ul>
-            </li>
-                
-            <li><a href="./food-and-drink.html">Food & Drink</a>
-              <ul class="dropdown" aria-label="submenu">
-                <li><a href="./1498-the-spice-affair.html">1498 The Spice Affair</a></li>
-                <li><a href="./argo-lounge.html">Argo Lounge</a></li>
-                <li><a href="./wildwood.html">Wildwood</a></li>
-              </ul>
-            </li>
-
-            <li><a href="./activities.html">Activities</a>
-              <ul class="dropdown" aria-label="subenu">
-                <li><a href="./flag-fen.html">Flag Fen</a></li>
-                <li><a href="./peterborough-cathedral.html">Peterborough Cathedral</a></li>
-                <li><a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a></li>
-              </ul>
-            </li>
-                
-            <li><a href="./index.html">Home</a></li>
-                
-          </ul>   
+      <!-- NOTE: menu links loaded in reverse order due to float right in css -->
+      <!-- NOTE: ARIA labels included in menu labels for accessibility -->
+      <!-- NOTE: Only three links for each of the three dropdown categories - enough to show functionality -->
+  
+        <nav role="navigation" aria-label="menu">
+          <div class="PTnav" id="navbar">
+            <img src="./images/logo/peterborough-tourism-logo.png" class="logo" alt="Peterborough Tourism Logo"/>
+  
+            <div class="dropdown" aria-label="submenu">
+              <button class="dropbtn"><a href="./accommodation.html">Accommodation <i class="fa fa-caret-down"></i></a></button>
+                <div class="dropdown-content">
+                  <a href="./bull-hotel.html">The Bull Hotel</a>
+                  <a href="./pearl-hotel.html">The Pearl Hotel</a>
+                  <a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a>
+                </div><!-- dropdown content-->
+            </div><!-- dropdown -->
+        
+  
+            <div class="dropdown" aria-label="submenu">
+              <button class="dropbtn"><a href="./food-and-drink.html">Food & Drink <i class="fa fa-caret-down"></i></a></button>
+              <div class="dropdown-content">
+                <a href="./1498-the-spice-affair.html">1498 The Spice Affair</a>
+                <a href="./argo-lounge.html">Argo Lounge</a>
+                <a href="./wildwood.html">Wildwood</a>
+              </div><!-- dropdown content-->
+            </div><!-- dropdown -->
+     
+            <div class="dropdown" aria-label="submenu">
+            <button class="dropbtn"><a href="./activities.html">Activities <i class="fa fa-caret-down"></i></a></button>
+              <div class="dropdown-content">
+                <a href="./flag-fen.html">Flag Fen</a>
+                <a href="./peterborough-cathedral.html">Peterborough Cathedral</a>
+                <a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a>
+              </div><!-- dropdown content-->
+            </div><!-- dropdown -->
+  
+            <a href="./whats-on.html"  class="active">What's On</a>
+  
+            <a href="./index.html">Home</a>
+     
+            <a href="javascript:void(0);" class="icon" onclick="PTnavigation()"><i class="fa-solid fa-bars"></i></a><!-- hamburger, visible under 800px-->
+  
+          </div><!-- PTnav -->
         </nav>
-      </div><!--menu ribbon -->
-            
-    </div><!-- header -->
+      </header>
+
+      
+      <div id="content">
+      
+        <div id="intro-text">
+
+          <h1>What's On in Peterborough</h1>
+          <p>Peterborough has a lot going on: everything from sewing lessons to ghost walks, art exhibitions to science fiction cos-play. Here's a small selection of upcoming events: have fun!</p> 
+
+        </div><!-- intro-text -->
+  
+        <div id="event">
+          <div>
+          <img src="./images/events/sister-act.jpg" width="300px" alt="PODS presents Sister Act at Peterborough Cathedral"/>
+          </div>
+          <div>
+            <a href="https://www.peterborough-cathedral.org.uk/143/section.aspx/142/sister_act" target="_blank"><h2>Sister Act The Musical at Peterborough Cathedral</h2></a>
+          <p><strong>Location:</strong><a href="./peterborough-cathedral.html" alt="Peterborough Cathedral"> Peterborough Cathedral</a></p>
+          <p><strong>Dates:</strong> Wednesday 31<sup>st</sup> May 2023 at 19.30, Thursday 1<sup>st</sup> June 2023 at 14.30 and 19.30, Friday 2<sup>nd</sup> June 2023 at 14.30 and 19.30, Saturday 3<sup>rd</sup> June 2023 at 14.30 and 19.30</p>
+          <p><strong>Fees:</strong> Adults £21.50, Concessions £19.50 (booking fees apply).</p>
+          <p><strong>Accessibility:</strong> Wheelchair access, crowded, loud, bright flashing lights.</p>
+          </div>
+          <p>You will follow nightclub singer Deloris Van Cartier as she is placed in protective custody in the one place she is sure to be safe… a convent! Whilst finding herself at odds with the strict Mother Superior, she uses her singing talents to uplift the choir and inspire her sisters. Bringing new life into the church, will she take it too far and blow her cover?</p>
+          <p>Sister Act is a stirring and joyful musical based on the 1992 film of the same name. With music from eight-time Tony and Oscar winner Alan Menken (Newsies, Beauty and The Beast), Sister Act was nominated for five Tony Awards, including best musical.</p>
+          <p>You'll be dancing in the pews!</p>
+        </div><!-- event --> 
+
+        <div id="event">
+          <h3>Charters Annual Gin & Cider Festival</h3><br>
+          <img src="./images/events/charters-annual-gin-and-cider-festival.jpg" width="300px" alt="Charters Annual Gine and Cider Festival"/>
+          <p><strong>Location:</strong> Charters (a floating Dutch barge at Town Bridge, Peterborough PE1 1FP), a short walk from the City Centre.</p>
+          <p><strong>Dates:</strong> Thursday 1<sup>st</sup> June 2023 to Sunday 4<sup>th</sup> June 2023</p>
+          <p><strong>Fees:</strong> Free entrance. Drinks: ££ - £££</p>
+          <p><strong>Accessibility:</strong> No wheelchair access , may cause difficulty for visitors with mobility issues (it's a boat), crowded, loud, bright lights at night.</p>
+          <p>Charters are delighted to be holding their Annual Cider & Gin Festival.</p>
+          <p>The festival will showcase 20+ Real Ciders and Perries and 30+ Gins. Might be best not to drive... but if you are, you can always buy some to take home with you</p>
+          <p><strong>REMEMBER:</strong> Don't drink and drive!</p>
+          <a href="https://www.charters-bar.com/events/charters-gin-cider-festival/" target="_blank">>> Charters Gin and Cider Festival on Charters Bar's website</a>
+        </div><!-- event --> 
+        
+        <div id="event">
+          <h3>Unofficial Galaxies at Peterborough Cathedral</h3><br>
+          <img src="./images/events/unofficial-galaxies.jpg" width="300px" alt="Unofficial Galaxies at Peterborough Cathedral"/>
+          <p><strong>Location:</strong> <a href="./peterborough-cathedral.html" alt="Peterborough Cathedral"> Peterborough Cathedral</a></p>
+          <p><strong>Dates:</strong> 19<sup>th</sup> July - 29<sup>th</sup> August 2023</p>
+          <p><strong>Fees:</strong> Adult £10, Child/Student £6, Family Ticket - £30 (2 adults & up to 3 children or 1 adult & up to 4 children)<br>Carer tickets - FREE (with paying ticket)</p>
+          <p><strong>Accessibility:</strong> Wheelchair access. There will be a number of quiet sessions available for those with additional needs. During these sessions the music will be turned off and the lighting adjusted.</p>
+          <p>One of the most amazing Star Wars collections in private hands is making a rare visit to the UK.</p>
+          <p>Among the most exciting exhibits in the 120+ piece collection are a full-size Landspeeder purchased from London’s Elstree Studios, and the desk and chair of young Anakin Skywalker from the 1999 film The Phantom Menace.</p>
+          <p>Also on display will be an array of original production items, as well as costumes for characters such as Princess Leia, Han Solo, Chewbacca, Darth Vader and many more. Much prized Star Wars toys dating from 1977 to 1999 will also be on show.</p>
+          <p><strong>Notes:</strong>> Visiting in costume will be positively encouraged!</p>
+          <a href="https://www.peterborough-cathedral.org.uk/galaxies.aspx" target="_blank">>> Unofficial Galaxies on the cathedral's website</a>
+        </div><!-- event --> 
+  
+      </div><!--content -->
 
 
-    <h1>What's On in Peterborough</h1>
 
-
-    list of events - calendar might be a ball ache
-
+      <div class="footer">
+        <!-- NOTE: div elements inside footer class are counted with css for layout - if adding an extra column, be sure to wrap it in its own div and add new nth-child settings to the footer css -->
+       
+        <!-- not all ids in the footer's div elements are not used, but may be helpful in future editing - and if not, they do no harm -->
+        
+        <div id="about">
+          <p><a href="./index.html" alt="Peterborough Tourism Home"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50"></a><br>
+            &copy; P110162087<br>
+            COM280: Web Design & Development<br>
+            2023
+          </p>
+        </div><!-- about -->
+        
+        <div id="contact">
+          <p>Contact Us:<br>
+            <a href="./contact_us.html#email">Email</a><br>
+            <a href="./contact_us.html#postal_address">Snail Mail<!-- Flat C, The Vineyard<br>Minster Precincts<br>Peterborough<br>PE1 1XU --></a><br>
+            <a href="./contact_us.html#telephone">Telephone</a><br>
+            <a href="./contact_us.html#carrier_pigeon">Carrier Pigeon</a><!-- Just for a giggle ;) -->
+          </p>
+        </div><!-- contact -->
+  
+        <!-- NOTE: these are null links - I haven't created dummy social media accounts for this project as they would be publicly accessible, so they go to the site's home page -->
+        <!-- If I'd had live accounts, I would be tempted to place them at the top of the page - people don't always make it to the bottom of the page -->
+        <!-- And Social Media links are likely to have fresher content than a static website, so it gives more chances for visitors to see it -->
+        <!-- Twitter would have been my primary link in the past, but Elon Musk's had hiswicked way and the result is dramatically reduced user engagement, so now it's in last place -->
+        
+        <div id="social">
+          <!-- all off site links opened in new tab/window, so visitor doesn't leave site completely and can easily return -->
+          <p>Social Media:<br><br>
+            <a href="https://www.facebook.com" target="_blank" alt="Find Us on Facebook"><img src="./images/link-images/facebook.png"></a>
+            <a href="https://www.whatsapp.com" target="_blank" alt="Message Us on Whatsapp"><img src="./images/link-images/whatsapp.png"></a>
+            <a href="https://www.twitter.com" target="_blank" alt="See What We've Been Tweeting"><img src="./images/link-images/twitter.png"></a>
+          </p>
+        </div><!-- social -->
+                       
+      </div><!-- footer -->
+              
     </body>
-    </html>
+  </html>
