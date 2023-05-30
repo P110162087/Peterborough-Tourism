@@ -601,7 +601,7 @@ float: left;
 /* Styles for the Whats On page blocks - these are a little different to the link-blocks used on pother pages */
 
 #event {
-  display:block;
+  display: table;
   float: left;
   font-family: 'Red Hat Display', sans-serif;
   background-color: whitesmoke;
@@ -611,6 +611,11 @@ float: left;
   width: 100%;
 }
 
+
+event div {
+  display: table-cell;
+}
+
 #event h2, h3, p {
   vertical-align: text-top;
   padding-left: 10px;
@@ -618,9 +623,8 @@ float: left;
 }
 
 #event img {
-  display: block;
+  display: flex;
   float: left;
-
   margin: 10px;
   border: 1px solid black;
 }
