@@ -42,15 +42,18 @@ body {
   width: 200px;
   padding: 0;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .PTnav {
+  font-family: 'Red Hat Display', sans-serif;
+  color: white;
   overflow: hidden;
   background-color: #666;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  height: 62px;
+  height: 60px;
+
 }
 
 .PTnav a {
@@ -96,15 +99,17 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 999;
+  margin-top: -7px;
+  background-color: #666;
+  color: white;
 }
 
 .dropdown-content a {
   float: none;
-  color: #666;
+  color: white;
   padding: 8px 12px;
   text-decoration: none;
   display: block;
@@ -514,6 +519,7 @@ img.reload {
 
 
 #intro-text {
+  font-family: 'Red Hat Display', sans-serif;
   padding-left: 10px;
   
 }
@@ -521,6 +527,7 @@ img.reload {
 /* Styles bloccked content in main body on all pages */
 
 #link-block {
+  font-family: 'Red Hat Display', sans-serif;
   height: auto;
   width: 100%;
   margin: auto;
@@ -544,6 +551,7 @@ img.reload {
   border: 1px solid #000;
   float: left;
   margin: 6px;
+  border: 1px solid black;
 }
 
 #link-block img.slides {
@@ -552,9 +560,10 @@ margin: 0;
 float: left;
 
 }
-#link-block h2, h3, p {
+#link-block h2, h3, p, q {
   vertical-align: text-top;
-  padding: 0px;
+  padding-left: 10px;
+  padding-right:10px;
 }
 
 .venue {

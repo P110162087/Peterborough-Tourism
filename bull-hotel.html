@@ -25,59 +25,138 @@
   </head>
 
   <body>
-    <div id="header">
-      <div class="menu_ribbon">
+    <header>
 
-        <div class="logo">
-          <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">
-          <h1>Peterborough Tourism</h1>
-        </div><!-- Logo -->
+    <!-- NOTE: menu links loaded in reverse order due to float right in css -->
+    <!-- NOTE: ARIA labels included in menu labels for accessibility -->
+    <!-- NOTE: Only three links for each of the three dropdown categories - enough to show functionality -->
 
-        <nav role="navigation">
+      <nav role="navigation" aria-label="menu">
+        <div class="PTnav" id="navbar">
+         <img src="./images/logo/peterborough-tourism-logo.png" class="logo" alt="Peterborough Tourism Logo"/>
 
-          <!-- NOTE: top level menu items in reverse order as they are floated right -->
-          <!-- Only three items in each category, enough to show my approach -->
-          <!-- no contact links in the nav - it is becoming a design standard to have this in the page footer, and website visitors are learning to expect this -->
-          <ul>
-            <li><a href="./whats-on.html">What's On</a></li>
+          <div class="dropdown" aria-label="submenu">
+            <button class="dropbtn"><a href="./accommodation.html" class="active">Accommodation <i class="fa fa-caret-down"></i></a></button>
+              <div class="dropdown-content">
+                <a href="./bull-hotel.html" class="active">The Bull Hotel</a>
+                <a href="./pearl-hotel.html">The Pearl Hotel</a>
+                <a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a>
+              </div><!-- dropdown content-->
+          </div><!-- dropdown -->
+      
 
-            <li><a href="./accommodation.html">Accommodation</a>
-              <ul class="dropdown" aria-label="submenu">
-                <li><a href="./bull-hotel.html">The Bull Hotel</a></li>
-                <li><a href="./pearl-hotel.html">The Pearl Hotel</a></li>
-                <li><a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a></li>
-              </ul>
-            </li>
+          <div class="dropdown" aria-label="submenu">
+            <button class="dropbtn"><a href="./food-and-drink.html">Food & Drink <i class="fa fa-caret-down"></i></a></button>
+            <div class="dropdown-content">
+              <a href="./1498-the-spice-affair.html">1498 The Spice Affair</a>
+              <a href="./argo-lounge.html">Argo Lounge</a>
+              <a href="./wildwood.html">Wildwood</a>
+            </div><!-- dropdown content-->
+          </div><!-- dropdown -->
+   
+          <div class="dropdown" aria-label="submenu">
+            <button class="dropbtn"><a href="./activities.html">Activities <i class="fa fa-caret-down"></i></a></button>
+            <div class="dropdown-content">
+              <a href="./flag-fen.html">Flag Fen</a>
+              <a href="./peterborough-cathedral.html">Peterborough Cathedral</a>
+              <a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a>
+            </div><!-- dropdown content-->
+          </div><!-- dropdown -->
+
+          <a href="./whats-on.html">What's On</a>
+
+          <a href="./index.html">Home</a>
+   
+          <a href="javascript:void(0);" class="icon" onclick="PTnavigation()"><i class="fa-solid fa-bars"></i></a><!-- hamburger, visible under 800px-->
+
+        </div><!-- PTnav -->
+      </nav>
+    </header>
+    
+
+    <div id="content">
+      
+      <div id="intro-text">
+        <h1>The Bull Hotel</h1>
+        <p>Pamper yourself at our favourite hotel in Peterborough: a perfect location, a full range of amenities, and fine dining equals pure luxury and comfort.</p> 
+      </div><!-- intro-text -->
+
+      <div id="link-block">
+
+        <div id="slideshow">
+          <img src="./images/bull-hotel/the-bull-hotel-slider.jpg" alt="The Bull Hotel" class="slides"/>
+        </div><!-- slideshow -->
                 
-            <li><a href="./food-and-drink.html">Food & Drink</a>
-              <ul class="dropdown" aria-label="submenu">
-                <li><a href="./1498-the-spice-affair.html">1498 The Spice Affair</a></li>
-                <li><a href="./argo-lounge.html">Argo Lounge</a></li>
-                <li><a href="./wildwood.html">Wildwood</a></li>
-              </ul>
-            </li>
+        <div class="venue">
+          <p><b>Rooms:</b> Double, Twin, Family, Four Poster Rooms, Suites<br>
+            <b>Facilities:</b> Restaurant, Bar, Weddings, Events, Conference Rooms, Parking, Wi-Fi<br>
+            <b>Price Range:</b> £££<br><br>
+            <a href="https://www.tripadvisor.co.uk/Hotel_Review-g187045-d192773-Reviews-The_Bull_Hotel_Sure_Hotel_Collection_By_Best_Western-Peterborough_Cambridgeshire_Englan.html" target="_blank"><img src="./images/link-images/tripadvisor.svg" style="border: 0; width: 94px; height: 20px;" alt="See this restaurant on Tripadvisor" class="not-slides"></a><br><br>
+            <a href="https://www.peelhotels.co.uk/bull-hotel/" target="_blank"><small><b>>> Go to Argo Lounge's website</b></small></a>
+          </p>
+        </div>
+      
+      </div><!-- link-block-->
 
-            <li><a href="./activities.html">Activities</a>
-              <ul class="dropdown" aria-label="subenu">
-                <li><a href="./flag-fen.html">Flag Fen</a></li>
-                <li><a href="./peterborough-cathedral.html">Peterborough Cathedral</a></li>
-                <li><a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a></li>
-              </ul>
-            </li>
-                
-            <li><a href="./index.html">Home</a></li>
-                
-          </ul>   
-        </nav>
-      </div><!--menu ribbon -->
+      <div id="link-block">
+        <p>A beautifully appointed, charming hotel with a central location and a focus on comfort and hospitality.</p>
+        <p>This historic building includes 118 rooms, function rooms for all occasions, fine dining in The Brasserie, or lighter bites are available in the Pastroudis Bar and Lounge.</p>
+        <p>The four poster room is a particular treat: check out the offers for romantic breaks on their website.</p>
+      </div><!-- link-block -->
+
+      <div id="link-block">
+        <q>Originally dating back to the 17th century, this grade two listed building has, over the years, been carefully restored and tastefully refurbished, to provide guests with a high degree of four star comfort, whilst our friendly and efficient staff offers service and hospitality which is unrivalled in the city.</q>
+        <br>
+        <small>-- From The Bull Hotel's Website</small></p>
+      </div><!--link-block -->
+      
+      
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.735211862411!2d-0.2454739237996109!3d52.57439957207535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877f0fff56a55fb%3A0xefc974c80f40d1b7!2sThe%20Bull%20Hotel!5e0!3m2!1sen!2suk!4v1685438098532!5m2!1sen!2suk" 
+          width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+        </iframe>
+      </div><!-- map -->
+
+    </div><!--content -->
+
+    <div class="footer">
+      <!-- NOTE: div elements inside footer class are counted with css for layout - if adding an extra column, be sure to wrap it in its own div and add new nth-child settings to the footer css -->
+      <!-- It's done this way rather than using a flex display just to show I can really - use of child elements is not generally well understood even by professional web developers -->
+      <!-- not all ids in the footer's div elements are not used, but may be helpful in future editing - and if not, they do no harm -->
+      
+      <div id="about">
+        <p><a href="./index.html" alt="Peterborough Tourism Home"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50"></a><br>
+          &copy; P110162087<br>
+          COM280: Web Design & Development<br>
+          2023
+        </p>
+      </div><!-- about -->
+      
+      <div id="contact">
+        <p>Contact Us:<br>
+          <a href="./contact_us.html#email">Email</a><br>
+          <a href="./contact_us.html#postal_address">Snail Mail<!-- Flat C, The Vineyard<br>Minster Precincts<br>Peterborough<br>PE1 1XU --></a><br>
+          <a href="./contact_us.html#telephone">Telephone</a><br>
+          <a href="./contact_us.html#carrier_pigeon">Carrier Pigeon</a><!-- Just for a giggle ;) -->
+        </p>
+      </div><!-- contact -->
+
+      <!-- NOTE: these are null links - I haven't created dummy social media accounts for this project as they would be publicly accessible, so they go to the site's home page -->
+      <!-- If I'd had live accounts, I would be tempted to place them at the top of the page - people don't always make it to the bottom of the page -->
+      <!-- And Social Media links are likely to have fresher content than a static website, so it gives more chances for visitors to see it -->
+      <!-- Twitter would have been my primary link in the past, but Elon Musk's had hiswicked way and the result is dramatically reduced user engagement, so now it's in last place -->
+      
+      <div id="social">
+        <!-- all off site links opened in new tab/window, so visitor doesn't leave site completely and can easily return -->
+        <p>Social Media:<br><br>
+          <a href="https://www.facebook.com" target="_blank" alt="Find Us on Facebook"><img src="./images/link-images/facebook.png"></a>
+          <a href="https://www.whatsapp.com" target="_blank" alt="Message Us on Whatsapp"><img src="./images/link-images/whatsapp.png"></a>
+          <a href="https://www.twitter.com" target="_blank" alt="See What We've Been Tweeting"><img src="./images/link-images/twitter.png"></a>
+        </p>
+      </div><!-- social -->
+                     
+    </div><!-- footer -->
             
-    </div><!-- header -->
-
-
-
-
-
-    <h1>The Bull Hotel</h1>
-
-    </body>
-    </html>
+  </body>
+</html>
