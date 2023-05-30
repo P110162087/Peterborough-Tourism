@@ -61,7 +61,7 @@
           </div><!-- dropdown -->
      
           <div class="dropdown" aria-label="submenu">
-            <button class="dropbtn"><a href="./activities.html"ctivities <i class="fa fa-caret-down"></i></a></button>
+            <button class="dropbtn"><a href="./activities.html">Activities <i class="fa fa-caret-down"></i></a></button>
             <div class="dropdown-content">
               <a href="./flag-fen.html">Flag Fen</a>
               <a href="./peterborough-cathedral.html">Peterborough Cathedral</a>
@@ -80,9 +80,62 @@
     </header>
 
     
-<h1>Contact Us</h1>
+    <div id="content">
 
-<div id="email"></div>
+      <div id="intro-text">
+        <h1>Contact Us</h1>
+        <p>Get in touch with Peterborough Tourism for local travel advice, observations, or if you have any feedback on this website.</p>
+        <p>Email is our preferred contact method, and we'll get back to you as soon as we can.</p> 
+      </div><!-- intro-text -->
+
+      <div id="link-block">
+
+
+
+
+      <h2>Email Contact:</h2>
+
+      <form id="contact" method="post" action="">
+
+        <!-- Name -->
+        <div>
+          <label for="contact_name">Name:</label>
+          <input type="text" id="contact_name" name="name"></input>
+          <span class="error">This field is required</span>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="contact_email">Email:</label>
+          <input type="email" id="contact_email" name="email"></input>
+          <span class="error">A valid email address is required</span>				
+        </div>	
+
+        <!--Website --
+        <div>
+          <label for="contact_website">Website:</label>
+          <input type="url" id="contact_website" name="website"></input>
+          <span class="error">A valid url is required</span>								
+        </div>-->
+
+        <!-- Message -->
+        <div>
+          <label for="contact_message">Message</label>
+          <textarea id="contact_message" name="message"></textarea>
+          <span class="error">This field is required</span>												
+        </div>
+
+        <!-- Submit Button -->
+        <div id="contact_submit">				
+          <button type="submit">SUBMIT</button>
+        </div>
+
+      </form>
+
+      </div><!-- link-block -->
+
+
+      <div id="email"></div>
 form?
 <div id="postal_address"></div>
 my home address will do
@@ -98,46 +151,50 @@ and if you should get it working yourself, please let us know!</p>
 
 
 
-<div class="footer">
-  <!-- NOTE: div elements inside footer class are counted with css for layout - if adding an extra column, be sure to wrap it in its own div and add new nth-child settings to the footer css -->
-  
-  <!-- not all ids in the footer's div elements are not used, but may be helpful in future editing - and if not, they do no harm -->
-  
-  <div id="about">
-    <p><a href="./index.html" alt="Peterborough Tourism Home"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50"></a><br>
-      &copy; P110162087<br>
-      COM280: Web Design & Development<br>
-      2023
-    </p>
-  </div><!-- about -->
-  
-  <div id="contact">
-    <p>Contact Us:<br>
-      <a href="./contact_us.html#email">Email</a><br>
-      <a href="./contact_us.html#postal_address">Snail Mail<!-- Flat C, The Vineyard<br>Minster Precincts<br>Peterborough<br>PE1 1XU --></a><br>
-      <a href="./contact_us.html#telephone">Telephone</a><br>
-      <a href="./contact_us.html#carrier_pigeon">Carrier Pigeon</a><!-- Just for a giggle ;) -->
-    </p>
-  </div><!-- contact -->
+    </div><!-- content -->
 
-  <!-- NOTE: these are null links - I haven't created dummy social media accounts for this project as they would be publicly accessible, so they go to the site's home page -->
-  <!-- If I'd had live accounts, I would be tempted to place them at the top of the page - people don't always make it to the bottom of the page -->
-  <!-- And Social Media links are likely to have fresher content than a static website, so it gives more chances for visitors to see it -->
-  <!-- Twitter would have been my primary link in the past, but Elon Musk's had hiswicked way and the result is dramatically reduced user engagement, so now it's in last place -->
-  
-  <div id="social">
-    <!-- all off site links opened in new tab/window, so visitor doesn't leave site completely and can easily return -->
-    <p>Social Media:<br><br>
-      <a href="https://www.facebook.com" target="_blank" alt="Find Us on Facebook"><img src="./images/link-images/facebook.png"></a>
-      <a href="https://www.whatsapp.com" target="_blank" alt="Message Us on Whatsapp"><img src="./images/link-images/whatsapp.png"></a>
-      <a href="https://www.twitter.com" target="_blank" alt="See What We've Been Tweeting"><img src="./images/link-images/twitter.png"></a>
-    </p>
-  </div><!-- social -->
-                 
-</div><!-- footer -->
-        
-</body>
+    <div class="footer">
+      <!-- NOTE: div elements inside footer class are counted with css for layout - if adding an extra column, be sure to wrap it in its own div and add new nth-child settings to the footer css -->
+      
+      <!-- not all ids in the footer's div elements are not used, but may be helpful in future editing - and if not, they do no harm -->
+      
+      <div id="about">
+        <p><a href="./index.html" alt="Peterborough Tourism Home"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50"></a><br>
+          &copy; P110162087<br>
+          COM280: Web Design & Development<br>
+          2023
+        </p>
+      </div><!-- about -->
+      
+      <div id="contact">
+        <p>Contact Us:<br>
+          <a href="./contact_us.html#email">Email</a><br>
+          <a href="./contact_us.html#postal_address">Snail Mail<!-- Flat C, The Vineyard<br>Minster Precincts<br>Peterborough<br>PE1 1XU --></a><br>
+          <a href="./contact_us.html#telephone">Telephone</a><br>
+          <a href="./contact_us.html#carrier_pigeon">Carrier Pigeon</a><!-- Just for a giggle ;) -->
+        </p>
+      </div><!-- contact -->
+
+      <!-- NOTE: these are null links - I haven't created dummy social media accounts for this project as they would be publicly accessible, so they go to the site's home page -->
+      <!-- If I'd had live accounts, I would be tempted to place them at the top of the page - people don't always make it to the bottom of the page -->
+      <!-- And Social Media links are likely to have fresher content than a static website, so it gives more chances for visitors to see it -->
+      <!-- Twitter would have been my primary link in the past, but Elon Musk's had hiswicked way and the result is dramatically reduced user engagement, so now it's in last place -->
+      
+      <div id="social">
+        <!-- all off site links opened in new tab/window, so visitor doesn't leave site completely and can easily return -->
+        <p>Social Media:<br><br>
+          <a href="https://www.facebook.com" target="_blank" alt="Find Us on Facebook"><img src="./images/link-images/facebook.png"></a>
+          <a href="https://www.whatsapp.com" target="_blank" alt="Message Us on Whatsapp"><img src="./images/link-images/whatsapp.png"></a>
+          <a href="https://www.twitter.com" target="_blank" alt="See What We've Been Tweeting"><img src="./images/link-images/twitter.png"></a>
+        </p>
+      </div><!-- social -->
+                     
+    </div><!-- footer -->
+            
+  </body>
 </html>
+
+
 
 
 

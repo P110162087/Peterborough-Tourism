@@ -20,15 +20,17 @@ DELETE
 
 /* Begin Styling the page */
 
-body {
+/*body {
   font-family: 'Red Hat Display', sans-serif;
   color: black;
-  }
+  } */
 
 .content {
-    margin-top: 5px;
-    background-color: white;
+  margin-top: 5px;
+  background-color: white;
 }
+
+.content
 
 /* Nav Styles */
 
@@ -566,8 +568,6 @@ float: left;
   padding-right:10px;
 }
 
-
-
 .venue {
   padding-left: 15px;
 
@@ -609,7 +609,6 @@ float: left;
   padding-bottom:5px;
   width: 100%;
 }
-
 
 event div {
   display: table-cell;
@@ -653,9 +652,7 @@ event div {
     height: auto;
     width: 98%;
   }	
-
 }
-
 
 @media (max-width: 600px) {
   
@@ -698,12 +695,10 @@ event div {
 
 @media (max-width: 420px) {
 
-
   #slideshow {
     margin-left: 0 !important;
     width: 95% !important;
   }
-    
 
 }
   
@@ -725,6 +720,85 @@ event div {
   }
 }
 /* End Slideshow*/
+
+/* Contact form styles */
+
+#form {
+  display:inline-flex;
+  float: right;
+  background-color: whitesmoke;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  
+
+}
+
+#contact {
+  font-family: 'Red Hat Display', sans-serif;
+  color: black;
+
+}
+
+#contact label{
+	display: inline-block;
+	width: 120px;
+  font-family: "Helvetica";
+  margin-right: 3em;
+  margin-left: 3em;
+}
+
+input {
+  width: 20em;
+  height: 2em;
+  background: transparent;
+  border: 1px solid black;
+}
+
+#contact_submit button{
+  display: block;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  margin-left: 375px;
+  margin-top: 20px;
+  border-style: solid;
+  border: 1px solid black;
+}
+
+#contact div{
+	margin-top: 3em;
+}
+
+textarea{
+	vertical-align: middle;
+	height: 8em;
+  width: 20em;
+  background: transparent;
+  border: 1px solid black;
+}
+
+.error{
+	display: none;
+	margin-left: 10px;
+  
+}		
+
+.error_show{
+	color: Crimson;
+	margin-left: 10px;
+  font-family: "Helvetica";
+  
+}
+
+input.invalid, textarea.invalid{
+	border: 1px solid Crimson;
+}
+
+input.valid, textarea.valid{
+	border: 1px solid MediumSeaGreen ;
+}
+
+
+/* END Contact form styles */
 
 /* End MainBody Styles */
 
