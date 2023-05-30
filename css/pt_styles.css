@@ -618,11 +618,10 @@ float: left;
 }
 
 #event img {
-  display: flex;
-  float:left;
-  margin-right: 10px;
-  margin-left: 10px;
-  margin-bottom: 10px;
+  display: block;
+  float: left;
+
+  margin: 10px;
   border: 1px solid black;
 }
 
