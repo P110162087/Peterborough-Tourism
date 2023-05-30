@@ -518,13 +518,12 @@ img.reload {
 
 
 
-#intro-text {
+#intro-text h1, p {
   font-family: 'Red Hat Display', sans-serif;
   padding-left: 10px;
-  
 }
 
-/* Styles bloccked content in main body on all pages */
+/* Styles blocks of content in main body on all pages (except What's On) */
 
 #link-block {
   font-family: 'Red Hat Display', sans-serif;
