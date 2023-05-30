@@ -21,62 +21,147 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
     
-    <script src="./javascript/carousel.js"></script><!-- javascript file for the home page carousel - other image sliders are managed purely with css keyframes -->
+    <!-- Font Awesome icons link -->
+    <script src="https://kit.fontawesome.com/55aeb2372e.js" crossorigin="anonymous"></script>
+
+   <script src="./javascript/navbar.js"></script><!-- script for responsive multi-level navbar -->
+    <!--<script src="./javascript/hamburger.js"></script>-->
+    
   </head>
 
   <body>
-    <div id="header">
-      <div class="menu_ribbon">
-
-        <div class="logo">
-          <img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo" style="width: 40px; height:40px;">
-          <h1>Peterborough Tourism</h1>
-        </div><!-- Logo -->
-
-        <nav role="navigation">
-
-          <!-- NOTE: top level menu items in reverse order as they are floated right -->
-          <!-- Only three items in each category, enough to show my approach -->
-          <!-- no contact links in the nav - it is becoming a design standard to have this in the page footer, and website visitors are learning to expect this -->
-          <ul>
-            <li><a href="./whats-on.html">What's On</a></li>
-
-            <li><a href="./accommodation.html">Accommodation</a>
-              <ul class="dropdown" aria-label="submenu">
-                <li><a href="./bull-hotel.html">The Bull Hotel</a></li>
-                <li><a href="./pearl-hotel.html">The Pearl Hotel</a></li>
-                <li><a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a></li>
-              </ul>
-            </li>
-                
-            <li><a href="./food-and-drink.html">Food & Drink</a>
-              <ul class="dropdown" aria-label="submenu">
-                <li><a href="./1498-the-spice-affair.html">1498 The Spice Affair</a></li>
-                <li><a href="./argo-lounge.html">Argo Lounge</a></li>
-                <li><a href="./wildwood.html">Wildwood</a></li>
-              </ul>
-            </li>
-
-            <li><a href="./activities.html">Activities</a>
-              <ul class="dropdown" aria-label="subenu">
-                <li><a href="./flag-fen.html">Flag Fen</a></li>
-                <li><a href="./peterborough-cathedral.html">Peterborough Cathedral</a></li>
-                <li><a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a></li>
-              </ul>
-            </li>
-                
-            <li><a href="./index.html">Home</a></li>
-                
-          </ul>   
-        </nav>
-      </div><!--menu ribbon -->
-            
-    </div><!-- header -->
-
-    <h1>Flag Fen</h1>
-
-
-
-    </body>
-    </html>
     
+    <header>
+
+      <!-- NOTE: menu links loaded in reverse order due to float right in css -->
+      <!-- NOTE: ARIA labels included in menu labels for accessibility -->
+      <!-- NOTE: Only three links for each of the three dropdown categories - enough to show functionality -->
+  
+        <nav role="navigation" aria-label="menu">
+          <div class="PTnav" id="navbar">
+           <img src="./images/logo/peterborough-tourism-logo.png" class="logo" alt="Peterborough Tourism Logo"/>
+  
+            <div class="dropdown" aria-label="submenu">
+              <button class="dropbtn"><a href="./accommodation.html">Accommodation <i class="fa fa-caret-down"></i></a></button>
+                <div class="dropdown-content">
+                  <a href="./bull-hotel.html">The Bull Hotel</a>
+                  <a href="./pearl-hotel.html">The Pearl Hotel</a>
+                  <a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a>
+                </div><!-- dropdown content-->
+            </div><!-- dropdown -->
+        
+  
+            <div class="dropdown" aria-label="submenu">
+              <button class="dropbtn"><a href="./food-and-drink.html">Food & Drink <i class="fa fa-caret-down"></i></a></button>
+              <div class="dropdown-content">
+                <a href="./1498-the-spice-affair.html">1498 The Spice Affair</a>
+                <a href="./argo-lounge.html">Argo Lounge</a>
+                <a href="./wildwood.html">Wildwood</a>
+              </div><!-- dropdown content-->
+            </div><!-- dropdown -->
+     
+            <div class="dropdown" aria-label="submenu">
+              <button class="dropbtn"><a href="./activities.html" class="active">Activities <i class="fa fa-caret-down"></i></a></button>
+              <div class="dropdown-content">
+                <a href="./flag-fen.html" class="active">Flag Fen</a>
+                <a href="./peterborough-cathedral.html">Peterborough Cathedral</a>
+                <a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a>
+              </div><!-- dropdown content-->
+            </div><!-- dropdown -->
+  
+            <a href="./whats-on.html">What's On</a>
+  
+            <a href="./index.html">Home</a>
+     
+            <a href="javascript:void(0);" class="icon" onclick="PTnavigation()"><i class="fa-solid fa-bars"></i></a><!-- hamburger, visible under 800px-->
+  
+          </div><!-- PTnav -->
+        </nav>
+      </header>
+
+      
+
+      <div id="content">
+      
+        <div id="intro-text">
+          <h1>Flag Fen Archaeology Park</h1>
+          <p>Flag Fen offers a unique insight into Bronze Age life in the Fens, with authentic recreations of ancient lifestyles set in a beatiful landscape.</p> 
+        </div><!-- intro-text -->
+  
+        <div id="link-block">
+  
+          <div id="slideshow">
+            <img src="./images/flag-fen/flag-fen-archaeology-park-slider.jpg" alt="Flag Fen Archaeology Park" class="slides"/>
+          </div><!-- slideshow -->
+                  
+          <div class="venue">
+            <p><b>Opening Times:</b> Wednesday to Sunday, 10:00 - 16:00, last entrance 15:15<br>
+              <b>Accessibilty:</b> Wheelchair accessible with level paths throughout the site, mobility scooters available to borrow, largely quiet and uncrowded.<br>
+              <b>Entrance Fees:</b> Adults £6, Kids £3, Family £15 (2 adults, up to 3 kids), Carers and under 5s free<br><br>
+              <a href="https://www.tripadvisor.co.uk/Attraction_Review-g187045-d215939-Reviews-Flag_Fen-Peterborough_Cambridgeshire_England.html" style="border: 0; width: 94px; height: 20px;" alt="See Flag Fen on Tripadvisor" class="not-slides"></a><br><br>
+              <a href="https://flagfen.org.uk/" target="_blank"><small><b>>> Go to Argo Lounge's website</b></small></a>
+            </p>
+          </div>
+        
+        </div><!-- link-block-->
+  
+        <div id="link-block">
+          <p>Peterborough's Bronze Age history is utterly fascinating, and you can learn all about it here. Flag Fen features an authentic recreation of a Bronze Age roundhouse, a museum with Bronze Age artifacts, a family-friendly and wheelchair-friendly walking trail through beautiful Fenland landscape and an ancient wooden causeway.</p>
+          <p>Frequent special events and plenty of activities to keep the kids occupied.</p>
+        </div><!-- link-block -->
+  
+        <div id="link-block">
+          <q>Flag Fen Archaeology Park is a fascinating place where visitors can see remains of the well-preserved mysterious causeway and explore the prehistoric site packed full of amazing stories. Visit the museum to see one of the earliest wheels discovered in Britain, experience what life was like in a Bronze Age round house and children can have a go at archaeology in ‘The big dig’ – a mock-up of an archaeological dig.</q>
+          <br>
+          <small>-- From Flag Fen's Website</small></p>
+        </div><!--link-block -->
+        
+
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.719539669235!2d-0.1922908883768445!3d52.57468297195907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4877fa7e03b522a7%3A0x2a34732ad8b6672a!2sFlag%20Fen%20Archaeology%20Park!5e0!3m2!1sen!2suk!4v1685446124281!5m2!1sen!2suk" 
+            width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+          </iframe>
+        </div><!-- map -->
+  
+      </div><!--content -->
+
+      <div class="footer">
+        <!-- NOTE: div elements inside footer class are counted with css for layout - if adding an extra column, be sure to wrap it in its own div and add new nth-child settings to the footer css -->
+        <!-- It's done this way rather than using a flex display just to show I can really - use of child elements is not generally well understood even by professional web developers -->
+        <!-- not all ids in the footer's div elements are not used, but may be helpful in future editing - and if not, they do no harm -->
+        
+        <div id="about">
+          <p><a href="./index.html" alt="Peterborough Tourism Home"><img src="./images/logo/pt_logo_2_100.png" alt="Peterborough Tourism Logo"width="50" height="50"></a><br>
+            &copy; P110162087<br>
+            COM280: Web Design & Development<br>
+            2023
+          </p>
+        </div><!-- about -->
+        
+        <div id="contact">
+          <p>Contact Us:<br>
+            <a href="./contact_us.html#email">Email</a><br>
+            <a href="./contact_us.html#postal_address">Snail Mail<!-- Flat C, The Vineyard<br>Minster Precincts<br>Peterborough<br>PE1 1XU --></a><br>
+            <a href="./contact_us.html#telephone">Telephone</a><br>
+            <a href="./contact_us.html#carrier_pigeon">Carrier Pigeon</a><!-- Just for a giggle ;) -->
+          </p>
+        </div><!-- contact -->
+  
+        <!-- NOTE: these are null links - I haven't created dummy social media accounts for this project as they would be publicly accessible, so they go to the site's home page -->
+        <!-- If I'd had live accounts, I would be tempted to place them at the top of the page - people don't always make it to the bottom of the page -->
+        <!-- And Social Media links are likely to have fresher content than a static website, so it gives more chances for visitors to see it -->
+        <!-- Twitter would have been my primary link in the past, but Elon Musk's had hiswicked way and the result is dramatically reduced user engagement, so now it's in last place -->
+        
+        <div id="social">
+          <!-- all off site links opened in new tab/window, so visitor doesn't leave site completely and can easily return -->
+          <p>Social Media:<br><br>
+            <a href="https://www.facebook.com" target="_blank" alt="Find Us on Facebook"><img src="./images/link-images/facebook.png"></a>
+            <a href="https://www.whatsapp.com" target="_blank" alt="Message Us on Whatsapp"><img src="./images/link-images/whatsapp.png"></a>
+            <a href="https://www.twitter.com" target="_blank" alt="See What We've Been Tweeting"><img src="./images/link-images/twitter.png"></a>
+          </p>
+        </div><!-- social -->
+                       
+      </div><!-- footer -->
+              
+    </body>
+  </html>
