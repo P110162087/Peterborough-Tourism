@@ -593,6 +593,7 @@ float: left;
 #link-block a {
   text-decoration: none;
   padding-left: 10px;
+  color: #1a748e;
   font-weight: bold;
 }
 
@@ -781,6 +782,13 @@ input[type=submit] {
   padding-bottom: 9px;
   padding-left: 6px;
   margin-bottom: 5px;
+}
+
+section a {
+
+  text-decoration: none;
+  color: #1a748e;
+  font-weight: bold;
 }
 
 .container h1, h2, h3, p, q {
