@@ -610,7 +610,7 @@ float: left;
   width: 100%;
 }
 
-event div {
+#event div {
   display: table-cell;
 }
 
@@ -721,80 +721,134 @@ event div {
 }
 /* End Slideshow*/
 
-/* Contact form styles */
+/* Contact Us Page Styles */
 
-#form {
-  display:inline-flex;
-  float: right;
-  background-color: whitesmoke;
+/* Style inputs, select elements and textareas */
+input[type=text], select, textarea{
+  width: 100%;
+  min-height: 50px;
+  padding: 12px;
   border: 1px solid black;
-  margin-bottom: 5px;
-  
-
-}
-
-#contact {
-  font-family: 'Red Hat Display', sans-serif;
-  color: black;
-
-}
-
-#contact label{
-	display: inline-block;
-	width: 120px;
-  font-family: "Helvetica";
-  margin-right: 3em;
-  margin-left: 3em;
-}
-
-input {
-  width: 20em;
-  height: 2em;
-  background: transparent;
-  border: 1px solid black;
-}
-
-#contact_submit button{
-  display: block;
-  background-color: whitesmoke;
   border-radius: 4px;
-  margin-left: 375px;
-  margin-top: 20px;
-  border-style: solid;
-  border: 1px solid black;
-}
-
-#contact div{
-	margin-top: 3em;
+  box-sizing: border-box;
+  resize: vertical;
+  background: white;
 }
 
 textarea{
-	vertical-align: middle;
-	height: 8em;
-  width: 20em;
-  background: transparent;
+  height: 200px;
+}
+
+input[type=email], select, textarea{
+  width: 100%;
+  min-height: 50px;
+  padding: 12px;
   border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  background: white;
 }
 
-.error{
-	display: none;
-	margin-left: 10px;
-  
-}		
+/* Style the label to display next to the inputs */
 
-.error_show{
+label {
+  font-family: 'Red Hat Display', sans-serif;
+  color: black;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  margin-left: 5px;
+  font-size: larger;
+}
+
+/* Style the submit button */
+
+input[type=submit] {
+  background-color: MediumSeaGreen;
+  color: white;
+  padding: 12px 20px;
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  vertical-align: middle;
+  margin-top: 5px;
+  border:2px solid white;
+  filter: drop-shadow(4px 4px 5px #666);
+}
+
+/* Style the container */
+
+.container {
+  max-width: 100%;
+  
+}
+
+.container section {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  border: 1px solid black;
+  padding: 10px;
+  padding-top: 6px;
+  padding-bottom: 9px;
+  padding-left: 6px;
+  margin-bottom: 5px;
+}
+
+.container h1, h2, h3, p, q {
+  font-family: 'Red Hat Display', sans-serif;
+  padding-left: 10px;
+
+}
+
+/* Floating column for labels: 25% width */
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* jQuery-validate response styling */
+
+.error {
+  font-family: 'Red Hat Display', sans-serif;
 	color: Crimson;
-	margin-left: 10px;
-  font-family: "Helvetica";
-  
+  font-weight: bold;
+}	
+
+input.error, textarea.error {
+	border: 3px solid Crimson;
 }
 
-input.invalid, textarea.invalid{
-	border: 1px solid Crimson;
+input.valid, textarea.valid {
+	border: 3px solid MediumSeaGreen ;
 }
 
-input.valid, textarea.valid{
-	border: 1px solid MediumSeaGreen ;
+/* end borrowed */
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 

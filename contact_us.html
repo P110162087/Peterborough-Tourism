@@ -2,7 +2,7 @@
 
 
 <!-- NOTE: Web Crawlers welcome throughout site, so specifically allowed using the robots.txt file in the root, following robots protocol -->
-<!-- NOTE: since the nav menu is interactive, ARIA  labels included where necessary for accessibility --> 
+<!-- NOTE: since the nav menu is interactive, ARIA labels included where necessary for accessibility --> 
 
 <html>
 
@@ -23,10 +23,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
 
     <!-- Font Awesome icons link -->
-    <script src="https://kit.fontawesome.com/55aeb2372e.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://kit.fontawesome.com/55aeb2372e.js" crossorigin="anonymous"></script>
 
     <script src="./javascript/navbar.js"></script><!-- script for responsive multi-level navbar -->
-    
+
+    <!-- jQuery library-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!-- jQuery library on Cloudflare CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script><!--jQuery validation plugin on Cloudflare CDN - validates contact form using rules set in checkform.js -->
+    <script type="text/javascript" src="./javascript/check-form.js"></script><!-- calls the validate function and sets the validation rules -->
     
   </head>
 
@@ -88,66 +92,108 @@
         <p>Email is our preferred contact method, and we'll get back to you as soon as we can.</p> 
       </div><!-- intro-text -->
 
-      <div id="link-block">
+      <div class="container">
+        <section id="email_us">
+
+        <form class="form" id="contact" method="post" action="" name="contact">
+          
+          <h2><i class="fa-solid fa-at"></i> Email</h2>
+          
+          <!-- Name of Sender -->
+          <div class="row">
+            <div class="col-25">
+              <label for="sendername">Contact Name:</label>
+            </div><!-- col-25-->
+            <div class="col-75">
+              <input type="text" id="sendername" name="sendername">
+              
+            </div><!-- col-75 -->
+          </div><!-- row -->
+
+          <!-- Email Address of Sender -->
+          <div class="row">
+            <div class="col-25">
+              <label for="senderemail">Email:</label>
+            </div><!-- col-25-->
+
+            <div class="col-75">
+              <input type="email" id="senderemail" name="senderemail">
+              
+            </div><!-- col-75 -->
+          </div><!-- row -->
+
+          <!-- Sender's Message -->
+          <div class="row">
+            <div class="col-25">
+              <label for="sendermessage">Message:</label>
+            </div><!-- col-25-->
+            <div class="col-75">
+              <textarea id="sendermessage" name="sendermessage"></textarea>
+             
+              
+            </div><!-- col-75 -->
+          </div><!-- row -->
+          
+          <!-- Submit Button -->
+          <div class="row">
+	          <div id="contact_submit">
+              <input type="submit" class="submit" type="submit" value="SUBMIT">
+	          </div>
+          </div><!-- row -->
+          
+
+        </form>
+        
+        </section><!-- email_us -->
+
+        <section id="postal_address">
+          <h2><i class="fa-solid fa-envelope"></i> Snail Mail</h2>
+          <p> If you prefer to write to us by post (or just want to send us a post card or a box of chocolates), our offices are here:</p>
+          
+          <p><strong>Peterborough Tourism<br>
+            Flat C, The Vineyard<br>
+            Minster Precincts<br>
+            Peterborough<br>
+            PE1 1XU</strong>
+          </p>
+          
+          <p><strong>Note:</strong> We'll get back to you when we can. Messages posted on the back of a fifty pound note will receive our <strong><em>Priority Service</em></strong>. &#128521;</p>
+
+        </section><!-- snail_mail -->
+
+        <section id="telephone">
+          <h2><i class="fa-sharp fa-solid fa-phone"></i> Telephone</h2>
+          <p>If you want to call us, you can, Monday to Thursday 10:00 to 16:00:</p>
+          <p><strong>Tel:</strong> (+44) 01733 123456</p>
+          <br>
+        </section><!-- telephone-->
+
+        <section id="carrier_pigeon">
+          <h2><i class="fa-solid fa-dove"></i> Carrier Pigeon</h2>
+          <p>OK, so we haven't actually got the carrier pigeon network running yet - it's quite slow and we lose too many packets (of seed).</p>
+          <p>However, you can read all about it <a href="https://en.wikipedia.org/wiki/IP_over_Avian_Carriers" alt="Carrier Pigeon Network">here...</a>
+          and if you should get it working yourself, please let us know (preferably by snail mail, and use the priority service outlined above).</p>
+        </section><!-- carrier pigeon-->
+
+      </div><!-- container -->
+      
+      <div id="container">
 
 
 
 
-      <h2>Email Contact:</h2>
-
-      <form id="contact" method="post" action="">
-
-        <!-- Name -->
-        <div>
-          <label for="contact_name">Name:</label>
-          <input type="text" id="contact_name" name="name"></input>
-          <span class="error">This field is required</span>
-        </div>
-
-        <!-- Email -->
-        <div>
-          <label for="contact_email">Email:</label>
-          <input type="email" id="contact_email" name="email"></input>
-          <span class="error">A valid email address is required</span>				
-        </div>	
-
-        <!--Website --
-        <div>
-          <label for="contact_website">Website:</label>
-          <input type="url" id="contact_website" name="website"></input>
-          <span class="error">A valid url is required</span>								
-        </div>-->
-
-        <!-- Message -->
-        <div>
-          <label for="contact_message">Message</label>
-          <textarea id="contact_message" name="message"></textarea>
-          <span class="error">This field is required</span>												
-        </div>
-
-        <!-- Submit Button -->
-        <div id="contact_submit">				
-          <button type="submit">SUBMIT</button>
-        </div>
-
-      </form>
-
-      </div><!-- link-block -->
+      </div>
+      
+      
+      
+      
+      
 
 
-      <div id="email"></div>
-form?
-<div id="postal_address"></div>
-my home address will do
+     
+      
 
-<div id="telephone"></div>
-07759 089039 - do I put my real phone number in here?  Or just use email?
 
-<div id="carrier_pigeon">
-<p>OK, so we haven't actually got the carrier pigeon network running yet - it's quite slow and there're too many lost packets.<br>
-However, you can read all about it <a href="https://en.wikipedia.org/wiki/IP_over_Avian_Carriers" alt="Carrier Pigeon Network">here...</a><br>
-and if you should get it working yourself, please let us know!</p>
-</div>
 
 
 
