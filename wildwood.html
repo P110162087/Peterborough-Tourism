@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="EN">
 
 
 <!-- NOTE: Web Crawlers welcome throughout site, so specifically allowed using the robots.txt file in the root, following robots protocol -->
@@ -7,10 +7,10 @@
 <html>
 
   <head>
-    <title>Peterborough Tourism - Wildwood</title>
+    <title>Peterborough Tourism - Peterborough Museum & Art Gallery</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Wildwood offers a range of Italian food, including the best pizzas in Peterborough, with a bar and a cinema.">
-    <meta name="keywords" content="Peterborough, wildwood, Italian, pizza, pasta, bar, cafe, cinema, dinner, food, restaurant, takeaway">
+    <meta name="description" content="A fascinating insight into the archaeology, history, art, culture and heritage of Peterborough and the Fens.">
+    <meta name="keywords" content="Peterborough, museum, art, gallery, history">
     <meta name="author" content="P110162087"><!-- Moi -->
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./images/favicon.png"><!-- A site without a favicon showing on the tab looks a bit too 'under construction' to me.  Amazing how many sites fail to use this easy branding advert -->
@@ -20,57 +20,58 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Red+Hat+Display&display=swap" rel="stylesheet">
-
+    
     <!-- Font Awesome icons link -->
     <script src="https://kit.fontawesome.com/55aeb2372e.js" crossorigin="anonymous"></script>
 
-    <script src="./javascript/navbar.js"></script><!-- script for responsive multi-level navbar -->
-    
+   <script src="./javascript/navbar.js"></script><!-- script for responsive multi-level navbar -->
+    <!--<script src="./javascript/hamburger.js"></script>-->
     
   </head>
 
   <body>
+    
     <header>
 
       <!-- NOTE: menu links loaded in reverse order due to float right in css -->
       <!-- NOTE: ARIA labels included in menu labels for accessibility -->
       <!-- NOTE: Only three links for each of the three dropdown categories - enough to show functionality -->
- 
-      <nav role="navigation" aria-label="menu">
-        <div class="PTnav" id="navbar">
-          <img src="./images/logo/peterborough-tourism-logo.png" class="logo" alt="Peterborough Tourism Logo"/>
-
-          <div class="dropdown" aria-label="submenu">
-            <button class="dropbtn"><a href="./accommodation.html">Accommodation <i class="fa fa-caret-down"></i></a></button>
-              <div class="dropdown-content">
-                <a href="./bull-hotel.html">The Bull Hotel</a>
-                <a href="./pearl-hotel.html">The Pearl Hotel</a>
-                <a href="./travelodge-peterborough-central.html">Travelodge Peterborough Central</a>
-              </div><!-- dropdown content-->
-          </div><!-- dropdown -->
+  
+        <nav role="navigation" aria-label="menu">
+          <div class="PTnav" id="navbar">
+           <img src="./images/logo/peterborough-tourism-logo.png" class="logo" alt="Peterborough Tourism Logo"/>
+  
+            <div class="dropdown">
+              <button class="dropbtn" aria-label="submenu"><a href="./accommodation.html" aria-label="menuitem">Accommodation <i class="fa fa-caret-down"></i></a></button>
+                <div class="dropdown-content">
+                  <a href="./bull-hotel.html" aria-label="menuitem">The Bull Hotel</a>
+                  <a href="./pearl-hotel.html" aria-label="menuitem">The Pearl Hotel</a>
+                  <a href="./travelodge-peterborough-central.html" aria-label="menuitem">Travelodge Peterborough Central</a>
+                </div><!-- dropdown content-->
+            </div><!-- dropdown -->
         
- 
-          <div class="dropdown" aria-label="submenu">
-            <button class="dropbtn"><a href="./food-and-drink.html" class="active">Food & Drink <i class="fa fa-caret-down"></i></a></button>
-            <div class="dropdown-content">
-              <a href="./1498-the-spice-affair.html" >1498 The Spice Affair</a>
-              <a href="./argo-lounge.html">Argo Lounge</a>
-              <a href="./wildwood.html" class="active">Wildwood</a>
-            </div><!-- dropdown content-->
-          </div><!-- dropdown -->
+  
+            <div class="dropdown">
+              <button class="dropbtn" aria-label="submenu"><a href="./food-and-drink.html"  aria-label="menuitem">Food & Drink <i class="fa fa-caret-down"></i></a></button>
+              <div class="dropdown-content">
+                <a href="./1498-the-spice-affair.html" aria-label="menuitem">1498 The Spice Affair</a>
+                <a href="./argo-lounge.html" aria-label="menuitem">Argo Lounge</a>
+                <a href="./wildwood.html" aria-label="menuitem">Wildwood</a>
+              </div><!-- dropdown content-->
+            </div><!-- dropdown -->
      
-          <div class="dropdown" aria-label="submenu">
-            <button class="dropbtn"><a href="./activities.html">Activities <i class="fa fa-caret-down"></i></a></button>
-            <div class="dropdown-content">
-              <a href="./flag-fen.html">Flag Fen</a>
-              <a href="./peterborough-cathedral.html">Peterborough Cathedral</a>
-              <a href="./peterborough-museum-and-art-gallery.html">Peterborough Museum & Art Gallery</a>
-            </div><!-- dropdown content-->
-          </div><!-- dropdown -->
+            <div class="dropdown">
+              <button class="dropbtn" aria-label="submenu"><a href="./activities.html" class="active" aria-label="menuitem">Activities <i class="fa fa-caret-down"></i></a></button>
+              <div class="dropdown-content">
+                <a href="./flag-fen.html" aria-label="menuitem">Flag Fen</a>
+                <a href="./peterborough-cathedral.html" aria-label="menuitem">Peterborough Cathedral</a>
+                <a href="./peterborough-museum-and-art-gallery.html" class="active" aria-label="menuitem">Peterborough Museum & Art Gallery</a>
+              </div><!-- dropdown content-->
+            </div><!-- dropdown -->
  
-          <a href="./whats-on.html">What's On</a>
+          <a href="./whats-on.html" aria-label="menuitem">What's On</a>
  
-          <a href="./index.html">Home</a>
+          <a href="./index.html" aria-label="menuitem">Home</a>
      
           <a href="javascript:void(0);" class="icon" onclick="PTnavigation()" rel="nofollow"><i class="fa-solid fa-bars"></i></a><!-- hamburger, visible under 800px-->
 
