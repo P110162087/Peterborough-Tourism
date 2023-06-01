@@ -17,13 +17,14 @@ $(document).ready(function() {
                 email:true
             },
 
-            // message is required, minimum of 3 characters
+            // message is required and message size is OK
             sendermessage: {
                 required: true,
-                rangelength: [10, 2000]
+                rangelength: [10, 2000] // minimum to maximum range for number of characters permitted
             },
         },
-
+        
+        // confirm message successful
         submitHandler: function(form) {
             alert('Your message is being sent to Peterborough Tourism');
         },

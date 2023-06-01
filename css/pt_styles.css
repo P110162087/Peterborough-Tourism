@@ -1,7 +1,7 @@
 /* ************ MAIN NOTES *********** *
 
 /* Hover effects have been applied for links in the footer - whilst this might seem superfluous when viewd on mobile devices, if the user has an active stylus */
-/* i.e. one that needs to be chrged to work, then hover effects can be seen on some devices */
+/* i.e. one that needs to be charged to work, then hover effects can be seen on some devices */
 
 /* NOTE: Legacy Browsers */ 
 /* Internet Explorer was officially retired in June 2022 */ 
@@ -10,13 +10,7 @@
 /* https://qz.com/2011408/some-companies-will-still-use-internet-explorer-after-its-retired */
 /* pub#: may 20 2021, Nicolas Rivero on QZ.com */
 
-DELETE
-/* Homework, look at: bootstrap, hamburgers.css, font-awesome, react,  - complete image gallery tutorial in w3c, navbar tutorial, work on moodboard, wireframes, css selectors, box model website layout, grid layouts, etc. */
-/* javascript for forms, responsive web design */
-/* validate form on the fly, thumbs up for sent, etc. */
-/* www.nellen.co.za/static-website, www.hellomonday.com LEARN JAVASCRIPT */
-
-/* ********** END NOTES ********* */
+/* ********** END MAIN NOTES ********* */
 
 /* Begin Styling the page */
 
@@ -52,8 +46,8 @@ DELETE
   color: white;
   overflow: hidden;
   background-color: #666;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
+  border: 2px solid black;
+  border-radius: 5px;
   height: 60px;
 
 }
@@ -69,7 +63,7 @@ DELETE
   height: 100%;
 }
 
-.active {
+a.active {
   background-color: darkorange;
   color: white;
   height: 100%;
@@ -191,9 +185,10 @@ img.reload {
 .carousel {
   background-color: white;
   max-width: auto;
-  border-bottom: 3px solid black;
-  padding-bottom: 0;
-  padding-top: 2px;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 0;
+  margin-top: 5px;
 }
 
 .carousel .carousel-inner {
@@ -214,6 +209,7 @@ img.reload {
 }
 
 .carousel .carousel-item.active {
+  background-color: darkorange;
   display: block;
 }
 
@@ -343,7 +339,7 @@ img.reload {
 
 
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
 
   .carousel .carousel-item .carousel-caption a,
   .carousel .carousel-item .carousel-caption span.descriptor {
@@ -438,7 +434,7 @@ img.reload {
 }
 
 
-@media (max-width: 800px) { 
+@media screen and (max-width: 800px) { 
   .carousel .controls svg.sml-svg .background {
     visibility:visible;
   }
@@ -533,7 +529,8 @@ img.reload {
   width: 100%;
   margin: auto;
   margin-bottom: 5px;
-  border: 1.5px solid black;
+  border: 1px solid black;
+  border-radius: 5px;
   box-sizing: border-box;
   background-color: #f3f3f3;
   display: table;
@@ -549,10 +546,11 @@ img.reload {
 
 #link-block img.not-slides  { /* .not-slides distinguishes images in link-blocks from slide sets in img containers - :not() failed to work correctly*/
   display: block;
-  border: 1px solid #000;
+  border: 1px solid black;
+  border-radius: 5px;
   float: left;
   margin: 6px;
-  border: 1px solid black;
+  
 }
 
 #link-block img.slides {
@@ -565,7 +563,12 @@ float: left;
 #link-block h2, h3, p, q {
   vertical-align: top;
   padding-left: 10px;
-  padding-right:10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px)
+#link-block h2, h3, p, q {
+  padding-left: 5px;
 }
 
 .venue {
@@ -587,6 +590,8 @@ float: left;
   height:0;
   margin: auto;
   margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .map iframe{
@@ -605,6 +610,7 @@ float: left;
   font-family: 'Red Hat Display', sans-serif;
   background-color: whitesmoke;
   border: 1px solid black;
+  border-radius: 5px;
   margin-bottom: 5px;
   padding-bottom:5px;
   width: 100%;
@@ -625,6 +631,7 @@ float: left;
   float: left;
   margin: 10px;
   border: 1px solid black;
+  border-radius: 5px;
 }
 
 #event a {
@@ -636,7 +643,7 @@ float: left;
 
 /* END of what's on page event blocks */
 
-@media ( max-width: 800px) {
+@media screen and ( max-width: 800px) {
 
   #link-block {
     display: block;
@@ -651,15 +658,18 @@ float: left;
   #link-block img.not-slides { 
     height: auto;
     width: 98%;
+    border: 1px solid black;
+    border-radius: 5px;
   }	
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   
   #link-block img.not-slides {
     float: none;
     display: block;
-    border: 1px solid #000;
+    border: 1px solid black;
+    border-radius: 5px;
     margin: 6px;
     width: 96%;
   }
@@ -671,10 +681,12 @@ float: left;
 #slideshow {
   padding: 0;
   display:table-cell;
-  width: 372px !important;
-  height: 248px !important;
+  width: 372px;
+  height: 248px;
   overflow: hidden;
-  border: 1px solid black;
+
+  border-radius: 5px;
+  box-sizing: border-box;
   filter: drop-shadow(3px 3px 3px black);
 }
 
@@ -684,20 +696,15 @@ float: left;
   top: 0;
   animation: slide 15s infinite;
   animation-delay: 2s;
+  box-sizing: content-box;
 }
 
-@media (min-width:421px) and (max-width: 500px) {
-  #slideshow {
-    max-width: 383px;
-  }
 
-}
 
-@media (max-width: 420px) {
+@media screen and (max-width: 600px) {
 
   #slideshow {
-    margin-left: 0 !important;
-    width: 95% !important;
+    width: 85%;
   }
 
 }
@@ -729,10 +736,11 @@ input[type=text], select, textarea{
   min-height: 50px;
   padding: 12px;
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
   resize: vertical;
   background: white;
+  font-size: larger;
 }
 
 textarea{
@@ -744,10 +752,11 @@ input[type=email], select, textarea{
   min-height: 50px;
   padding: 12px;
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
   resize: vertical;
   background: white;
+  font-size: larger;
 }
 
 /* Style the label to display next to the inputs */
@@ -759,6 +768,8 @@ label {
   display: inline-block;
   margin-left: 5px;
   font-size: larger;
+  font-weight: bold;
+  align:right;
 }
 
 /* Style the submit button */
@@ -768,26 +779,29 @@ input[type=submit] {
   color: white;
   padding: 12px 20px;
   border: 2px solid white;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   float: right;
   vertical-align: middle;
-  margin-top: 5px;
-  border:2px solid white;
   filter: drop-shadow(4px 4px 5px #666);
 }
 
 /* Style the container */
 
 .container {
-  max-width: 100%;
-  
+  max-width: 100%; 
+}
+
+.container img {
+  border: 1px solid black;
+  border-radius: 5px;
+  width:100%;
 }
 
 .container section {
-  border-radius: 5px;
   background-color: #f2f2f2;
   border: 1px solid black;
+  border-radius: 5px;
   padding: 10px;
   padding-top: 6px;
   padding-bottom: 9px;
@@ -841,7 +855,7 @@ input.valid, textarea.valid {
 	border: 3px solid MediumSeaGreen ;
 }
 
-/* end borrowed */
+/* End form validation styles*/
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -867,8 +881,8 @@ input.valid, textarea.valid {
     padding-left: 0px;
     padding-right: 10px;
     font-family: 'Red Hat Display', sans-serif;
-    border-top: 3px solid  black;
-    border-bottom: 3px solid black;
+    border: 3px solid  black;
+    border-radius: 5px;
 }
 
 .footer div:first-child {
@@ -923,13 +937,15 @@ input.valid, textarea.valid {
   margin-left: 10px;
   margin-top: 8px;
   border: 1.5px solid white;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .footer #social img:hover {
   filter: drop-shadow(4px 4px 5px whitesmoke);
 }
 
-@media (max-width: 899px) {
+@media screen and (max-width: 899px) {
 
   .footer #social img {
     width: 30px; 
@@ -939,7 +955,7 @@ input.valid, textarea.valid {
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
 
   .footer {
     font-size: 10px;
