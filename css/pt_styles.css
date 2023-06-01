@@ -24,8 +24,6 @@
   background-color: white;
 }
 
-.content
-
 /* Nav Styles */
 
 .PTnav a.logo {
@@ -541,8 +539,18 @@ img.reload {
 
 #link-block div {
   display: table-cell;
+}
+
+#link-block .event{
+  display: flex;
+
+}
+
+#link-block div.venue {
+  display: table-cell;
   vertical-align: text-top;
 }
+
 
 #link-block img.not-slides  { /* .not-slides distinguishes images in link-blocks from slide sets in img containers - :not() failed to work correctly*/
   display: block;
@@ -564,6 +572,12 @@ float: left;
   vertical-align: top;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.top {
+  vertical-align: top;
+  margin-top:0;
+  padding-top: 0;
 }
 
 @media screen and (max-width: 600px)
@@ -602,46 +616,6 @@ float: left;
   position:absolute;
 }
 
-/* Styles for the Whats On page blocks - these are a little different to the link-blocks used on pother pages */
-
-#event {
-  display: table;
-  float: left;
-  font-family: 'Red Hat Display', sans-serif;
-  background-color: whitesmoke;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  padding-bottom:5px;
-  width: 100%;
-}
-
-#event div {
-  display: table-cell;
-}
-
-#event h2, h3, p {
-  vertical-align: text-top;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-#event img {
-  display: flex;
-  float: left;
-  margin: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-#event a {
-  text-decoration: none;
-  font-size: smaller;
-  padding-left: 10px;
-  font-weight: bold;
-}
-
-/* END of what's on page event blocks */
 
 @media screen and ( max-width: 800px) {
 
@@ -661,6 +635,7 @@ float: left;
     border: 1px solid black;
     border-radius: 5px;
   }	
+
 }
 
 @media screen and (max-width: 600px) {
@@ -684,7 +659,6 @@ float: left;
   width: 372px;
   height: 248px;
   overflow: hidden;
-
   border-radius: 5px;
   box-sizing: border-box;
   filter: drop-shadow(3px 3px 3px black);
